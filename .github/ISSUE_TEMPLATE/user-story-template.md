@@ -14,9 +14,8 @@ I can: CAPABILITY
 so that: RECEIVED BENEFIT
 
 Acceptance Criteria:
-[ ]
-[ ]
-
+- [ ] 
+- [ ] 
 Tasks:
-[ ]
-[ ]
+- [ ] 
+- [ ]
