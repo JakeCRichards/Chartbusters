@@ -1,0 +1,29 @@
+
+
+
+/* CSS Variables */
+:root {
+    /* --primary-font: 
+    --secondary-font:  */
+    --primary-color: #530224; /* neon pink */
+    --secondary-color: #318ec4; /* light blue */
+    --highlight-color: #416a8e; /* dark blue */
+    --highlight-color-light: #7a9fc2; /* light blue */
+}
+
+.header-logo {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 50px 0; 
+    margin-bottom: 20px
+}
+
+.game-intro {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
