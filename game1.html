@@ -59,7 +59,7 @@
       <section class="text-center">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-8 game-intro">
+            <div id ="game-intro" class="col-8 game-intro">
               <h2>Let battle commence</h2>
               <p>
                 Ever wondered who really is the king or queen of pop? Now is your chance to find out.
@@ -101,7 +101,7 @@
                 <option value="2023">2023</option>
                 <option value="2024">2024</option>
               </select>
-              <button class="btn btn-primary" onclick="startGame()">
+              <button id="start-game-button" type="button" class="btn btn-primary" onclick="startGame()">
                 Start Game
               </button>
             </div>
@@ -110,8 +110,7 @@
       </section>
       <section class="text-center">
         <div id="song-container" >
-          
-        </div>
+          </div>
         
         
         <div id="game-over">
@@ -121,6 +120,10 @@
           <p>
             If you'd like to play again, select a new year from the dropdown
             above.
+          </p>
+          <p>
+            Reckon your knowledge is worth sharing? Hit the button below to
+            share your score with your friends.
           </p>
           <div id="fb-share">
             <div id="fb-share-button">
