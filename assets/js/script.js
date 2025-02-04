@@ -31,9 +31,8 @@ function fetchSongs(selectedYear) {
 function startGame() {
     gameSongs = getRandomSongs();
     showNextSong();
-    document.getElementById("song-container").style.display = "block";
-    document.getElementById("game-over").style.display = "none"; // Hide game-over message
-    document.getElementById("cardContainer").innerHTML = ""; // Clear old cards
+    document.getElementById('song-container').style.display = "block"; // Show container
+  document.getElementById("game-over").style.display = "none"; // Hide game-over message
   }
   
   function getRandomSongs(count = 11) {
