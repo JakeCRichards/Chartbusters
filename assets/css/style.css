@@ -57,12 +57,19 @@ footer {
 
 #intro {
     text-align: center;
+    margin-bottom: 40px;
     /* border: 2px solid var(--highlight-color); */ /* Remove this line */
 }
 
 #Instructions {
     text-align: center;
     /* border: 2px solid var(--highlight-color); */ /* Remove this line */
+}
+
+#Instructions .game-intro {
+    width: 50%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the element */
+    text-align: auto /* Center the text */
 }
 
 /* Custom CSS for home page */
@@ -208,15 +215,4 @@ footer {
 }
 
 #fb-share-button svg {
-    width: 18px;
-    fill: white;
-    vertical-align: middle;
-    border-radius: 2px
-}
-
-#fb-share-button span {
-    vertical-align: middle;
-    color: white;
-    font-size: 14px;
-    padding: 0 3px
-}
+    wid
