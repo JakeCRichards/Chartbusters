@@ -31,6 +31,7 @@ function fetchSongs(selectedYear) {
 function startGame() {
     gameSongs = getRandomSongs();
     showNextSong();
+    document.getElementById('song-container').style.display = "block"; // Show container
   }
   
   function getRandomSongs(count = 11) {
