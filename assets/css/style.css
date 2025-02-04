@@ -1,14 +1,34 @@
-
-
-
 /* CSS Variables */
 :root {
     /* --primary-font: 
     --secondary-font:  */
-    --primary-color: #530224; /* neon pink */
-    --secondary-color: #318ec4; /* light blue */
-    --highlight-color: #416a8e; /* dark blue */
-    --highlight-color-light: #7a9fc2; /* light blue */
+    --primary-color: #0cc3eb; /* light blue */
+    --secondary-color: #183650; /* dark blue */
+    --tertary-color: #e3d050; /* bright yellow*/
+    --highlight-color: #d72cc4; /* neon pink */
+    --highlight-color-light: #681e66; /* deep pink */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
 }
 
 .header-logo {
@@ -26,8 +46,22 @@
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    border: 4px solid var(--highlight-color);
+    width: 60%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the element */
 }
 
+#intro {
+    text-align: center;
+    /* border: 2px solid var(--highlight-color); */ /* Remove this line */
+}
+
+#Instructions {
+    text-align: center;
+    /* border: 2px solid var(--highlight-color); */ /* Remove this line */
+}
+
+/* Custom CSS for home page */
 
 
 /* CSS for game page */
@@ -92,7 +126,7 @@
 
 /* Buttons */
 .game-page button {
-    background: #ff5722;
+    background: var(--highlight-color-light);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -104,7 +138,7 @@
 }
 
 .game-page button:hover {
-    background: #e64a19;
+    background: var(--highlight-color);
 }
 
 /* End screen styling */
