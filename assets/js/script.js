@@ -54,20 +54,23 @@ function showNextSong() {
 
   document.getElementById("song-container").innerHTML = `
       <div class="game-wrapper">
-        <div class="card">
+        <div class="card col-md-3 col-lg-4">
           <img src="${currentSong.image}" alt="${currentSong.title}">
           <h3>${currentSong.title}</h3>
           <p>by ${currentSong.artist}</p>
           <audio controls src="${currentSong.audio}"></audio>
           <p class="chart-position">Peak Position: ${currentSong.peak}</p>
-        </div>
-        <div class="vs">Banger or Clanger?
+        </div> 
+        
+        <div class="vs col-md-3 col-lg-4">Banger or Clanger?
         <p>Did the next song chart **Higher**, **Lower**, or **The Same**?</p>
         <button onclick="guess('higher', ${currentSong.peak}, ${nextSong.peak})">Higher</button>
         <button onclick="guess('lower', ${currentSong.peak}, ${nextSong.peak})">Lower</button>
         <button onclick="guess('same', ${currentSong.peak}, ${nextSong.peak})">Same</button>
+        <div id="notifications" class="row"></div>
         </div>
-        <div class="card">
+        
+        <div class="card col-md-3 col-lg-4">
           <img src="${nextSong.image}" alt="${nextSong.title}">
           <h3>${nextSong.title}</h3>
           <p>by ${nextSong.artist}</p>
@@ -75,6 +78,7 @@ function showNextSong() {
           <p class="chart-position hidden">Peak Position: ???</p>
         </div>
       </div>
+      
       
     `;
 }
@@ -86,15 +90,23 @@ function guess(playerGuess, currentPeak, nextPeak) {
   if (playerGuess === "lower" && nextPeak > currentPeak) correct = true;
   if (playerGuess === "same" && nextPeak === currentPeak) correct = true;
 
-  if (correct) {
-    score++;
-    alert(`Correct! ✅ The next song peaked at position ${nextPeak}.`);
-  } else {
-    alert(`Wrong! ❌ The next song peaked at position ${nextPeak}.`);
-  }
+  // if (correct) {
+  //   score++;
+  //   alert(`Correct! ✅ The next song peaked at position ${nextPeak}.`);
+  // } else {
+  //   alert(`Wrong! ❌ The next song peaked at position ${nextPeak}.`);
+  // }
+
+  const notificationArea = document.getElementById("notifications");
+  notificationArea.textContent = `The next song peaked at position ${nextPeak}.`;
 
   currentIndex++;
-  showNextSong();
+  const nextSongButton = document.createElement("button");
+  nextSongButton.textContent = "Next Song";
+  nextSongButton.onclick = showNextSong;
+  notificationArea.appendChild(nextSongButton);
+
+  // showNextSong();
 }
 
 function endGame() {
@@ -107,7 +119,7 @@ function endGame() {
 }
 
 const yearDropdown = document.getElementById('yearDropdown');
-const selectedYear = yearDropdown.options[yearDropdown.selectedIndex].value;
+let selectedYear = yearDropdown.options[yearDropdown.selectedIndex].value;
 
 yearDropdown.addEventListener('change', function() {
     selectedYear = yearDropdown.options[yearDropdown.selectedIndex].value;
