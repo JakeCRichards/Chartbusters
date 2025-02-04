@@ -3,7 +3,7 @@ let currentIndex = 0; // Track which song we're on
 let score = 0; // Track correct answers
 let gameSongs = []; // Will hold the 11 random songs
 
-document.getElementById("yearDropdown").addEventListener("change", function() {
+document.getElementById("yearDropdown").addEventListener("change", function () {
   const selectedYear = this.value;
   fetchSongs(selectedYear);
 });
@@ -23,36 +23,36 @@ function fetchSongs(selectedYear) {
       );
     });
 
-    //   startGame(); // Call function to begin game after fetching songs
-    // })
-    // .catch((error) => console.error("Error loading JSON:", error));
+  //   startGame(); // Call function to begin game after fetching songs
+  // })
+  // .catch((error) => console.error("Error loading JSON:", error));
 }
 
 function startGame() {
-    gameSongs = getRandomSongs();
-    showNextSong();
-    document.getElementById('song-container').style.display = "block"; // Show container
+  gameSongs = getRandomSongs();
+  showNextSong();
+  document.getElementById("song-container").style.display = "block"; // Show container
   document.getElementById("game-over").style.display = "none"; // Hide game-over message
+}
+
+function getRandomSongs(count = 11) {
+  const validSongs = songs.filter(
+    (song) => song.audio && song.image.includes("http")
+  );
+  const shuffled = validSongs.sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}
+
+function showNextSong() {
+  if (currentIndex >= 10) {
+    endGame();
+    return;
   }
-  
-  function getRandomSongs(count = 11) {
-    const validSongs = songs.filter(
-      (song) => song.audio && song.image.includes("http")
-    );
-    const shuffled = validSongs.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, count);
-  }
-  
-  function showNextSong() {
-    if (currentIndex >= 10) {
-      endGame();
-      return;
-    }
-  
-    const currentSong = gameSongs[currentIndex];
-    const nextSong = gameSongs[currentIndex + 1];
-  
-    document.getElementById("song-container").innerHTML = `
+
+  const currentSong = gameSongs[currentIndex];
+  const nextSong = gameSongs[currentIndex + 1];
+
+  document.getElementById("song-container").innerHTML = `
       <div class="game-wrapper">
         <div class="card">
           <img src="${currentSong.image}" alt="${currentSong.title}">
@@ -77,42 +77,53 @@ function startGame() {
       </div>
       
     `;
-  }
-  
-  function guess(playerGuess, currentPeak, nextPeak) {
-    let correct = false;
-  
-    if (playerGuess === "higher" && nextPeak < currentPeak) correct = true;
-    if (playerGuess === "lower" && nextPeak > currentPeak) correct = true;
-    if (playerGuess === "same" && nextPeak === currentPeak) correct = true;
-  
-    if (correct) {
-      score++;
-      alert(`Correct! ✅ The next song peaked at position ${nextPeak}.`);
-    } else {
-      alert(`Wrong! ❌ The next song peaked at position ${nextPeak}.`);
-    }
-  
-    currentIndex++;
-    showNextSong();
-  }
-  
-  function endGame() {
-    document.getElementById("game-over").style.display = "block"; // Show game-over message
-    document.getElementById("score").innerHTML = `
-            <p>Your score: ${score} / 10</p>
-      `;
-    document.getElementById("song-container").style.display = "none"; // Hide game UI
-    document.getElementById("buttons").style.display = "none"; 
 }
 
-var fbButton = document.getElementById('fb-share-button');
-var url = window.location.href;
+function guess(playerGuess, currentPeak, nextPeak) {
+  let correct = false;
 
-fbButton.addEventListener('click', function () {
-    window.open('https://www.facebook.com/sharer/sharer.php?u=' + url,
-        'facebook-share-dialog',
-        'width=800,height=600'
-    );
-    return false;
+  if (playerGuess === "higher" && nextPeak < currentPeak) correct = true;
+  if (playerGuess === "lower" && nextPeak > currentPeak) correct = true;
+  if (playerGuess === "same" && nextPeak === currentPeak) correct = true;
+
+  if (correct) {
+    score++;
+    alert(`Correct! ✅ The next song peaked at position ${nextPeak}.`);
+  } else {
+    alert(`Wrong! ❌ The next song peaked at position ${nextPeak}.`);
+  }
+
+  currentIndex++;
+  showNextSong();
+}
+
+function endGame() {
+  document.getElementById("game-over").style.display = "block"; // Show game-over message
+  document.getElementById("score").innerHTML = `
+            <p>Your score: ${score} / 10</p>
+      `;
+  document.getElementById("song-container").style.display = "none"; // Hide game UI
+  document.getElementById("buttons").style.display = "none";
+}
+
+const yearDropdown = document.getElementById('yearDropdown');
+const selectedYear = yearDropdown.options[yearDropdown.selectedIndex].value;
+
+yearDropdown.addEventListener('change', function() {
+    selectedYear = yearDropdown.options[yearDropdown.selectedIndex].value;
+});
+
+const fbButton = document.getElementById("fb-share-button");
+const url = window.location.href;
+
+fbButton.addEventListener("click", function () {
+  const score = document.getElementById("score").innerText;
+  const year = document.
+  const message = `I just got ${score} on my knowledge of ${selectedYear} chart music. Think you can do better?`;
+  window.open(
+    "https://www.facebook.com/sharer/sharer.php?u=" + url,
+    "facebook-share-dialog",
+    "width=800,height=600"
+  );
+  return false;
 });
