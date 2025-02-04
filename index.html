@@ -11,54 +11,78 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Chartbusters</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="game1.html">Game1</a>
-              </li>
-            </ul>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <nav
+    id="navbar"
+    class="navbar navbar-expand-lg bg-body-tertiary sticky-top"
+  >
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Chartbusters</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="game1.html">Game1</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <header
+      id="home"
+      class="header hero"
+      style="padding: 80px 0; margin-bottom: 30px"
+    >
+      <div class="container-fluid text-center">
+        <div class="row">
+          <div>
+            <h1>Chartbusters</h1>
           </div>
         </div>
-      </nav>
-    <header id="home" class="header hero" style="padding: 80px 0; margin-bottom: 30px;">
-      <div class="container-fluid text-center">
-          <div class="row">
-              <div>
-                  <h1>Chartbusters</h1>
-              </div>
-          </div>
       </div>
-  </header>
-    <section id="Intro">
+    </header>
+    <main>
+      <section id="Intro">
         <h1>Who Ruleth the Charts?</h1>
-                <h2>Guess the position, win chart kudos</h2>
-                <p> Heard a song recently and wondered if it was a chart topper?<br>
-                    Play this game to see where the tune peaked and if it smashed its nearest chart rival.<br>
-                    Then share to see if you can beat your friends and settle those arguments once and for all.
-                </p>
-    </section>
-    <section id="Instructions">
+        <h2>Guess the position, win chart kudos</h2>
+        <p>
+          Heard a song recently and wondered if it was a chart topper?<br />
+          Play this game to see where the tune peaked and if it smashed its
+          nearest chart rival.<br />
+          Then share to see if you can beat your friends and settle those
+          arguments once and for all.
+        </p>
+      </section>
+      <section id="Instructions">
         <h1>How to play</h1>
-        <H2></H2>
+        <h2></h2>
         <ol>
-            <li>Pick a year</li>
-            <li>Look at the artist </li>
-            <li>Decide who got higher </li>
-            <li>Claim the glory</li>
-            <li>Share with friends</li>
+          <li>Pick a year</li>
+          <li>Look at the artist</li>
+          <li>Decide who got higher</li>
+          <li>Claim the glory</li>
+          <li>Share with friends</li>
         </ol>
-       </section>
+      </section>
+    </main>
+     
 
 
 
@@ -75,25 +99,51 @@ integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cD
 crossorigin="anonymous"
 </script>
 
- <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
- <script>
-    document
-      .querySelectorAll(".navbar-collapse .nav-link")
-      .forEach((link) => {
-        link.addEventListener("click", function (e) {
-          let section = document.querySelector(e.target.getAttribute("href"));
-          if (section) {
-            e.preventDefault(); // Prevent default anchor click behavior
-            let navbarHeight =
-              document.querySelector(".navbar-toggler").offsetHeight;
-            window.scroll({
-              top: section.offsetTop - navbarHeight, // Adjust for navbar height
-              behavior: "smooth",
-            });
-            document
-              .querySelector(".navbar-collapse")
-              .classList.remove("show"); // Collapse navbar
-          }
+    <footer class="bg-dark text-lg-start text-white">
+      <div class="container-fluid mt-4">
+        <div class="row">
+          <div class="col-12 text-center py-3">
+            <p>&copy; 2025 Chartbusters</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/bf5526169d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap JS Link -->
+    <script>
+      src =
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js";
+      integrity =
+        "sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL";
+      crossorigin = "anonymous";
+    </script>
+
+    <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
+    <script>
+      document
+        .querySelectorAll(".navbar-collapse .nav-link")
+        .forEach((link) => {
+          link.addEventListener("click", function (e) {
+            let section = document.querySelector(e.target.getAttribute("href"));
+            if (section) {
+              e.preventDefault(); // Prevent default anchor click behavior
+              let navbarHeight =
+                document.querySelector(".navbar-toggler").offsetHeight;
+              window.scroll({
+                top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                behavior: "smooth",
+              });
+              document
+                .querySelector(".navbar-collapse")
+                .classList.remove("show"); // Collapse navbar
+            }
+          });
         });
       });
   </script>
