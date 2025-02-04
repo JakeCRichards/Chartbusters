@@ -53,6 +53,12 @@ footer {
 }
 
 .header-logo {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 0;
+  margin-bottom: 20px;
     color: var(--primary-color);
     font-size: 2rem;
     font-weight: bold;
@@ -68,8 +74,15 @@ footer {
   border-radius: 10px;
   margin-bottom: 20px;
   border: 4px solid var(--highlight-color);
-  width: 80%; /* Adjust the width as needed */
+  width: 90%; /* Adjust the width as needed */
   margin: 0 auto; /* Center the element */
+  font-size: 1.5rem;
+}
+
+.form-select {
+  width: 50%;
+  margin: auto;
+  font-size: 1.5rem;
 }
 
 #intro {
@@ -82,6 +95,10 @@ footer {
   /* border: 2px solid var(--highlight-color); */ /* Remove this line */
 }
 
+#Instructions .game-intro {
+  width: 80%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the element */
+  text-align: auto; /* Center the text */
 #instructions .game-intro {
     width: 40%; /* Adjust the width as needed */
     margin: 0 auto; /* Center the element */
@@ -255,6 +272,88 @@ button:disabled:hover {
   background: #213a6f;
 }
 
+#game-over {
+  display: none;
+}
+
+#game-over {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Media Queries */
+
+/* Only mobiles */
+
+@media (max-width: 767px) {
+  /* Song image */
+  .game-page .card img {
+    display: none;
+  }
+}
+
+/* Tablets and larger */
+
+@media (min-width: 768px) {
+  .game-intro {
+    width: 80%;
+  }
+
+  .game-page .game-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #song1 {
+    order: 0;
+  }
+
+  #song2 {
+    order: 1;
+  }
+
+  #vs {
+    order: 2;
+    width: 60%;
+  }
+
+  #game-over {
+    width: 60%;
+  }
+}
+
+/* Laptops and larger */
+
+@media (min-width: 1024px) {
+
+  .game-intro {
+    width: 70%;
+  }
+
+  .game-page .game-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  #song1 {
+    order: 0;
+  }
+
+  #song2 {
+    order: 2;
+  }
+
+  #vs {
+    order: 1;
+    width: 20%;
+  }
 #fb-share-button svg {
     width: 18px;
     fill: white;

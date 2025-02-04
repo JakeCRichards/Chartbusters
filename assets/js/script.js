@@ -1,3 +1,4 @@
+// Initial Global Variable Definition
 let songs = []; // Global array to store songs
 let currentIndex = 0; // Track which song we're on
 let score = 0; // Track correct answers
@@ -5,6 +6,14 @@ let gameSongs = []; // Will hold the 11 random songs
 
 document.getElementById("yearDropdown").addEventListener("change", function () {
   const selectedYear = this.value;
+
+  // Reset Global Variables since we have changed years.
+  songs = [];
+  currentIndex = 0;
+  score = 0;
+  gameSongs = [];
+  document.getElementById("song-container").style.display = "none";
+
   fetchSongs(selectedYear);
 });
 
@@ -48,13 +57,12 @@ function showNextSong() {
     endGame();
     return;
   }
-
   const currentSong = gameSongs[currentIndex];
   const nextSong = gameSongs[currentIndex + 1];
 
   document.getElementById("song-container").innerHTML = `
       <div class="game-wrapper">
-        <div id="song1" class="card col-md-3 col-lg-4">
+        <div class="card col-md-3 col-lg-4">
           <img src="${currentSong.image}" alt="${currentSong.title}">
           <h3>${currentSong.title}</h3>
           <p>by ${currentSong.artist}</p>
@@ -62,7 +70,7 @@ function showNextSong() {
           <p class="chart-position">Peak Position: ${currentSong.peak}</p>
         </div> 
         
-        <div id="vs" class="vs col-md-3 col-lg-4">
+        <div class="vs col-md-3 col-lg-4">
         <h3>Banger or Clanger?</h3>
         <h4>Did the next song chart 
         <br>
@@ -76,7 +84,7 @@ function showNextSong() {
         </div>
         </div>
         
-        <div id="song2" class="card col-md-3 col-lg-4">
+        <div class="card col-md-3 col-lg-4">
           <img src="${nextSong.image}" alt="${nextSong.title}">
           <h3>${nextSong.title}</h3>
           <p>by ${nextSong.artist}</p>
@@ -96,13 +104,8 @@ function guess(playerGuess, currentPeak, nextPeak) {
   if (playerGuess === "lower" && nextPeak > currentPeak) correct = true;
   if (playerGuess === "same" && nextPeak === currentPeak) correct = true;
 
-  // if (correct) {
-  //   score++;
-  //   alert(`Correct! ✅ The next song peaked at position ${nextPeak}.`);
-  // } else {
-  //   alert(`Wrong! ❌ The next song peaked at position ${nextPeak}.`);
-  // }
- const notificationArea = document.getElementById("notifications");
+  // Create paragraph elements for score notification
+  const notificationArea = document.getElementById("notifications");
   const scoreArea = document.getElementById("score-tracking");
   if (correct) {
     score++;
@@ -115,53 +118,64 @@ function guess(playerGuess, currentPeak, nextPeak) {
     notificationArea.appendChild(wrongNotification);
   }
 
+  // Notification and Score Update
   const scoreNotification = document.createElement("p");
   scoreNotification.textContent = `The next song peaked at position ${nextPeak}.`;
   notificationArea.appendChild(scoreNotification);
+  scoreArea.textContent = `Score: ${score} / 10`;
 
+  // Disable Buttons (to prevent re-triggering)
   const guessButtons = document.querySelectorAll(".game-button");
   guessButtons.forEach((button) => (button.disabled = true));
 
-  
-  scoreArea.textContent = `Score: ${score} / 10`;
-  
-
+  // Increment Index and create button for next round!
   currentIndex++;
-  console.log(score);
   const nextSongButton = document.createElement("button");
   nextSongButton.textContent = "Next Song";
   nextSongButton.onclick = showNextSong;
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      showNextSong();
+    }
+  });
   notificationArea.appendChild(nextSongButton);
-
-  
 }
 
 function endGame() {
-  document.getElementById("game-over").style.display = "block"; // Show game-over message
-  document.getElementById("score").innerHTML = `
-            <p>Your score: ${score} / 10</p>
-      `;
   document.getElementById("song-container").style.display = "none"; // Hide game UI
-  document.getElementById("buttons").style.display = "none";
-}
+  document.getElementById("game-over").style.display = "block"; // Show game-over message
+  document.getElementById(
+    "score"
+  ).innerHTML = `<p>Your score: ${score} / 10</p>`;
 
-const yearDropdown = document.getElementById('yearDropdown');
+  // Reset
+  songs = [];  
+  currentIndex = 0;
+  score = 0;
+  gameSongs = [];
+  yearDropdown.selectedIndex = 0; // Reset dropdown to default to force player to select a new year
+  }
+
+const yearDropdown = document.getElementById("yearDropdown");
 let selectedYear = yearDropdown.options[yearDropdown.selectedIndex].value;
 
-yearDropdown.addEventListener('change', function() {
-    selectedYear = yearDropdown.options[yearDropdown.selectedIndex].value;
+yearDropdown.addEventListener("change", function () {
+  selectedYear = yearDropdown.options[yearDropdown.selectedIndex].value;
 });
 
-const fbButton = document.getElementById('fb-share-button');
+const fbButton = document.getElementById("fb-share-button");
 const url = window.location.href;
 
-fbButton.addEventListener('click', function () {
-    const score = document.getElementById("score").innerText;
-    const message = `I just got ${score} on my knowledge of ${selectedYear} chart music. Think you can do better?`;
-    window.open(
-        'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) + '&quote=' + encodeURIComponent(message),
-        'facebook-share-dialog',
-        'width=800,height=600'
-    );
-    return false;
+fbButton.addEventListener("click", function () {
+  const score = document.getElementById("score").innerText;
+  const message = `I just got ${score} on my knowledge of ${selectedYear} chart music. Think you can do better?`;
+  window.open(
+    "https://www.facebook.com/sharer/sharer.php?u=" +
+      encodeURIComponent(url) +
+      "&quote=" +
+      encodeURIComponent(message),
+    "facebook-share-dialog",
+    "width=800,height=600"
+  );
+  return false;
 });
