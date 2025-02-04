@@ -35,6 +35,10 @@ footer {
     text-align: center;
 }
 
+#home {
+    color: #ffffff;
+}
+
 .header-logo {
     color: var(--primary-color);
     font-size: 2rem;
@@ -220,5 +224,3 @@ button:disabled, button:disabled:hover {
     background: #213A6F
 }
 
-#fb-share-button svg {
-    wid
