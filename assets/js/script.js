@@ -8,13 +8,19 @@ lastScoreDisplay(); // Display last score if available
 // Function to display the last score if available (stored locally)
 function lastScoreDisplay() {
   let scoreUpdate = document.getElementById("game-intro");
-  if (localStorage.getItem("score")) {
+  let previousScore = localStorage.getItem("score");
+  
+  if (previousScore) {
     const scoreUpdateParagraph = document.createElement("p");
     scoreUpdateParagraph.id="previous-score";
     if (document.getElementById("previous-score")) {
       document.getElementById("previous-score").remove();
     };
+    if (previousScore < 10) {
     scoreUpdateParagraph.textContent = `Your last score was ${localStorage.getItem("score")} / 10. Can you beat it?`;
+    } else if (previousScore == 10) {
+      scoreUpdateParagraph.textContent = `Congratulations! You previously scored ${localStorage.getItem("score")} / 10. Can you do it again?`;
+    }
     scoreUpdate.appendChild(scoreUpdateParagraph);
   }
 }
