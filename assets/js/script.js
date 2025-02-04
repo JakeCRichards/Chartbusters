@@ -4,6 +4,7 @@ let currentIndex = 0; // Track which song we're on
 let score = 0; // Track correct answers
 let gameSongs = []; // Will hold the 11 random songs
 
+// Get the selected year from the dropdown
 document.getElementById("yearDropdown").addEventListener("change", function () {
   const selectedYear = this.value;
 
@@ -13,10 +14,21 @@ document.getElementById("yearDropdown").addEventListener("change", function () {
   score = 0;
   gameSongs = [];
   document.getElementById("song-container").style.display = "none";
-
+// Get the songs for the selected year
   fetchSongs(selectedYear);
 });
 
+// Start Game Function
+function startGame() {
+  // Runs functions to get random songs and display the first and second song  
+  gameSongs = getRandomSongs();
+  showNextSong();
+  // Show game container and hide game-over message
+  document.getElementById("song-container").style.display = "block"; 
+  document.getElementById("game-over").style.display = "none"; 
+}
+
+// Gathers songs from JSON file according to selected year
 function fetchSongs(selectedYear) {
   fetch(`./assets/json/Songs/${selectedYear}-EOY-Songs.json`)
     .then((response) => response.json())
@@ -31,19 +43,9 @@ function fetchSongs(selectedYear) {
         })
       );
     });
-
-  //   startGame(); // Call function to begin game after fetching songs
-  // })
-  // .catch((error) => console.error("Error loading JSON:", error));
 }
 
-function startGame() {
-  gameSongs = getRandomSongs();
-  showNextSong();
-  document.getElementById("song-container").style.display = "block"; // Show container
-  document.getElementById("game-over").style.display = "none"; // Hide game-over message
-}
-
+// Function to get 11 random songs from the songs array (1 start and 10 questions)
 function getRandomSongs(count = 11) {
   const validSongs = songs.filter(
     (song) => song.audio && song.image.includes("http")
@@ -52,14 +54,18 @@ function getRandomSongs(count = 11) {
   return shuffled.slice(0, count);
 }
 
+// Function to display the next song in the game until 10 songs have been played
 function showNextSong() {
   if (currentIndex >= 10) {
     endGame();
     return;
   }
+
+  // Moves next song to current song and gets the next song
   const currentSong = gameSongs[currentIndex];
   const nextSong = gameSongs[currentIndex + 1];
 
+  // Display the current and next song in the game
   document.getElementById("song-container").innerHTML = `
       <div class="game-wrapper">
         <div class="card col-md-3 col-lg-4">
@@ -75,11 +81,15 @@ function showNextSong() {
         <h4>Did the next song chart 
         <br>
         <strong>Higher, Lower, or the Same</strong>?</h4>
+
         <button class="game-button" onclick="guess('lower', ${currentSong.peak}, ${nextSong.peak})">Lower</button>
         <button class="game-button" onclick="guess('same', ${currentSong.peak}, ${nextSong.peak})">Same</button>
         <button class="game-button" onclick="guess('higher', ${currentSong.peak}, ${nextSong.peak})">Higher</button>
+
         <div id="notifications" class="row m-auto"></div>
+        
         <div class="row m-auto">
+        
         <p id="score-tracking">Score: ${score} / 10</p>
         </div>
         </div>
@@ -91,12 +101,12 @@ function showNextSong() {
           <audio controls src="${nextSong.audio}"></audio>
           <p class="chart-position hidden">Peak Position: ???</p>
         </div>
-      </div>
-      
-      
+
+      </div>   
     `;
 }
 
+// Function to check if the player's guess was correct
 function guess(playerGuess, currentPeak, nextPeak) {
   let correct = false;
 
@@ -128,7 +138,7 @@ function guess(playerGuess, currentPeak, nextPeak) {
   const guessButtons = document.querySelectorAll(".game-button");
   guessButtons.forEach((button) => (button.disabled = true));
 
-  // Increment Index and create button for next round!
+  // Move the song index along and create button for next round
   currentIndex++;
   const nextSongButton = document.createElement("button");
   nextSongButton.textContent = "Next Song";
@@ -141,6 +151,7 @@ function guess(playerGuess, currentPeak, nextPeak) {
   notificationArea.appendChild(nextSongButton);
 }
 
+// Function to end the game and display the final score
 function endGame() {
   document.getElementById("song-container").style.display = "none"; // Hide game UI
   document.getElementById("game-over").style.display = "block"; // Show game-over message
@@ -148,13 +159,13 @@ function endGame() {
     "score"
   ).innerHTML = `<p>Your score: ${score} / 10</p>`;
 
-  // Reset
-  songs = [];  
+  // Reset Global Variables
+  songs = [];
   currentIndex = 0;
   score = 0;
   gameSongs = [];
   yearDropdown.selectedIndex = 0; // Reset dropdown to default to force player to select a new year
-  }
+}
 
 const yearDropdown = document.getElementById("yearDropdown");
 let selectedYear = yearDropdown.options[yearDropdown.selectedIndex].value;
