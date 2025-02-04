@@ -148,4 +148,19 @@ crossorigin="anonymous"
               let navbarHeight =
                 document.querySelector(".navbar-toggler").offsetHeight;
               window.scroll({
-                top: section.offsetTop - na
+                top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                behavior: "smooth",
+              });
+              document
+                .querySelector(".navbar-collapse")
+                .classList.remove("show"); // Collapse navbar
+            }
+          });
+        });
+      ;
+  </script>
+  <!-- Other JavaScript -->
+<script src="assets/js/script.js"></script>
+</body>
+
+</html>
