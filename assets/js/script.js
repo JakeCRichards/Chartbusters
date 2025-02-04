@@ -113,17 +113,16 @@ yearDropdown.addEventListener('change', function() {
     selectedYear = yearDropdown.options[yearDropdown.selectedIndex].value;
 });
 
-const fbButton = document.getElementById("fb-share-button");
+const fbButton = document.getElementById('fb-share-button');
 const url = window.location.href;
 
-fbButton.addEventListener("click", function () {
-  const score = document.getElementById("score").innerText;
-  const year = document.
-  const message = `I just got ${score} on my knowledge of ${selectedYear} chart music. Think you can do better?`;
-  window.open(
-    "https://www.facebook.com/sharer/sharer.php?u=" + url,
-    "facebook-share-dialog",
-    "width=800,height=600"
-  );
-  return false;
+fbButton.addEventListener('click', function () {
+    const score = document.getElementById("score").innerText;
+    const message = `I just got ${score} on my knowledge of ${selectedYear} chart music. Think you can do better?`;
+    window.open(
+        'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) + '&quote=' + encodeURIComponent(message),
+        'facebook-share-dialog',
+        'width=800,height=600'
+    );
+    return false;
 });
