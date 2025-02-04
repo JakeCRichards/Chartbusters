@@ -54,7 +54,7 @@ function showNextSong() {
 
   document.getElementById("song-container").innerHTML = `
       <div class="game-wrapper">
-        <div class="card col-md-3 col-lg-4">
+        <div id="song1" class="card col-md-3 col-lg-4">
           <img src="${currentSong.image}" alt="${currentSong.title}">
           <h3>${currentSong.title}</h3>
           <p>by ${currentSong.artist}</p>
@@ -62,7 +62,7 @@ function showNextSong() {
           <p class="chart-position">Peak Position: ${currentSong.peak}</p>
         </div> 
         
-        <div class="vs col-md-3 col-lg-4">
+        <div id="vs" class="vs col-md-3 col-lg-4">
         <h3>Banger or Clanger?</h3>
         <h4>Did the next song chart 
         <br>
@@ -76,7 +76,7 @@ function showNextSong() {
         </div>
         </div>
         
-        <div class="card col-md-3 col-lg-4">
+        <div id="song2" class="card col-md-3 col-lg-4">
           <img src="${nextSong.image}" alt="${nextSong.title}">
           <h3>${nextSong.title}</h3>
           <p>by ${nextSong.artist}</p>
