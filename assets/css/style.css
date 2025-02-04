@@ -224,3 +224,6 @@ button:disabled, button:disabled:hover {
     background: #213A6F
 }
 
+#game-over {
+    display: none;
+}
