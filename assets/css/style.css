@@ -24,6 +24,10 @@ main {
     flex: 1;
 }
 
+section {
+    padding-bottom: 4rem;
+}
+
 footer {
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -69,7 +73,9 @@ footer {
 }
 
 /* Custom CSS for home page */
-
+.home-page {
+    background-color: var(--primary-color);
+}
 
 /* CSS for game page */
 
