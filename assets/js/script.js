@@ -62,12 +62,18 @@ function showNextSong() {
           <p class="chart-position">Peak Position: ${currentSong.peak}</p>
         </div> 
         
-        <div class="vs col-md-3 col-lg-4">Banger or Clanger?
-        <p>Did the next song chart **Higher**, **Lower**, or **The Same**?</p>
-        <button onclick="guess('higher', ${currentSong.peak}, ${nextSong.peak})">Higher</button>
-        <button onclick="guess('lower', ${currentSong.peak}, ${nextSong.peak})">Lower</button>
-        <button onclick="guess('same', ${currentSong.peak}, ${nextSong.peak})">Same</button>
-        <div id="notifications" class="row"></div>
+        <div class="vs col-md-3 col-lg-4">
+        <h3>Banger or Clanger?</h3>
+        <h4>Did the next song chart 
+        <br>
+        <strong>Higher, Lower, or the Same</strong>?</h4>
+        <button class="game-button" onclick="guess('lower', ${currentSong.peak}, ${nextSong.peak})">Lower</button>
+        <button class="game-button" onclick="guess('same', ${currentSong.peak}, ${nextSong.peak})">Same</button>
+        <button class="game-button" onclick="guess('higher', ${currentSong.peak}, ${nextSong.peak})">Higher</button>
+        <div id="notifications" class="row m-auto"></div>
+        <div class="row m-auto">
+        <p id="score-tracking">Score: ${score} / 10</p>
+        </div>
         </div>
         
         <div class="card col-md-3 col-lg-4">
@@ -96,17 +102,38 @@ function guess(playerGuess, currentPeak, nextPeak) {
   // } else {
   //   alert(`Wrong! ❌ The next song peaked at position ${nextPeak}.`);
   // }
+ const notificationArea = document.getElementById("notifications");
+  const scoreArea = document.getElementById("score-tracking");
+  if (correct) {
+    score++;
+    const correctNotification = document.createElement("p");
+    correctNotification.textContent = "Correct! ✅";
+    notificationArea.appendChild(correctNotification);
+  } else {
+    const wrongNotification = document.createElement("p");
+    wrongNotification.textContent = "Wrong! ❌";
+    notificationArea.appendChild(wrongNotification);
+  }
 
-  const notificationArea = document.getElementById("notifications");
-  notificationArea.textContent = `The next song peaked at position ${nextPeak}.`;
+  const scoreNotification = document.createElement("p");
+  scoreNotification.textContent = `The next song peaked at position ${nextPeak}.`;
+  notificationArea.appendChild(scoreNotification);
+
+  const guessButtons = document.querySelectorAll(".game-button");
+  guessButtons.forEach((button) => (button.disabled = true));
+
+  
+  scoreArea.textContent = `Score: ${score} / 10`;
+  
 
   currentIndex++;
+  console.log(score);
   const nextSongButton = document.createElement("button");
   nextSongButton.textContent = "Next Song";
   nextSongButton.onclick = showNextSong;
   notificationArea.appendChild(nextSongButton);
 
-  // showNextSong();
+  
 }
 
 function endGame() {

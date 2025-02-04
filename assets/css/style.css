@@ -143,6 +143,11 @@ footer {
     background: var(--highlight-color);
 }
 
+button:disabled, button:disabled:hover {
+    background: #919191;
+    cursor: not-allowed;
+}
+
 /* End screen styling */
 .game-page #song-container h2 {
     color: #333;
