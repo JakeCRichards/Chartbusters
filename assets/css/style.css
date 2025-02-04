@@ -140,3 +140,7 @@
 .game-page .chart-position.hidden {
     visibility: hidden;
 }
+
+#song-container {
+    display: none;
+}

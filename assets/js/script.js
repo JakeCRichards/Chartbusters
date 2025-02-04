@@ -9,7 +9,7 @@ document.getElementById("yearDropdown").addEventListener("change", function() {
 });
 
 function fetchSongs(selectedYear) {
-  fetch(`/assets/json/songs/${selectedYear}-EOY-Songs.json`)
+  fetch(`./assets/json/Songs/${selectedYear}-EOY-Songs.json`)
     .then((response) => response.json())
     .then((data) => {
       songs = data.content.sections[0].content[0].content[0].chartItems.map(
@@ -31,6 +31,7 @@ function fetchSongs(selectedYear) {
 function startGame() {
     gameSongs = getRandomSongs();
     showNextSong();
+    document.getElementById('song-container').style.display = "block"; // Show container
   }
   
   function getRandomSongs(count = 11) {
