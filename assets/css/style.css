@@ -64,7 +64,7 @@ footer {
 #instructions .game-intro {
     width: 40%; /* Adjust the width as needed */
     margin: 0 auto; /* Center the element */
-    text-align: auto /* Center the text */
+    text-align: auto; /* Center the text */
     border: 4px solid var(--tertiary-color);
 }
 
@@ -125,7 +125,7 @@ footer {
     font-size: 1em;
     color: #666;
 }
-
+m
 /* Question section */
 .game-page .question {
     margin-top: 20px;
@@ -211,4 +211,13 @@ footer {
 #fb-share-button svg {
     width: 18px;
     fill: white;
-  
+    vertical-align: middle;
+    border-radius: 2px
+}
+
+#fb-share-button span {
+    vertical-align: middle;
+    color: white;
+    font-size: 14px;
+    padding: 0 3px
+}
