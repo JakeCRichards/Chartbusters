@@ -149,17 +149,12 @@ function endGame() {
   ).innerHTML = `<p>Your score: ${score} / 10</p>`;
 
   // Reset
-  songs = [];
+  songs = [];  
   currentIndex = 0;
   score = 0;
   gameSongs = [];
-
-  // const resetGameButton = document.createElement('button');
-  // resetGameButton.type = "button";
-  // resetGameButton.textContent = "Reset Game";
-  // resetGameButton.onclick = fetchSongs;
-  // document.getElementById("game-over").appendChild(resetGameButton);
-}
+  yearDropdown.selectedIndex = 0; // Reset dropdown to default to force player to select a new year
+  }
 
 const yearDropdown = document.getElementById("yearDropdown");
 let selectedYear = yearDropdown.options[yearDropdown.selectedIndex].value;
