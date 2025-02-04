@@ -139,4 +139,9 @@
 
 /* Hide peak position text */
 .game-page .chart-position.hidden {
-    visibility: h
+    visibility: hidden;
+}
+
+#song-container {
+    display: none;
+}
