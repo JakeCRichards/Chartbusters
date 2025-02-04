@@ -14,7 +14,6 @@
   </head>
 
   <body class="d-flex flex-column min-vh-100 game-page">
-
     <nav
       id="navbar"
       class="navbar navbar-expand-lg bg-body-tertiary sticky-top"
@@ -113,19 +112,19 @@
           </div>
         </div>
       </section>
-      <section class="text-center">   
+      <section class="text-center">
         <div id="song-container">
           <div class="game-wrapper">
             <div class="card">
-              <img src="" alt="">
+              <img src="" alt="" />
               <h3></h3>
               <p></p>
               <audio controls src=""></audio>
-              <p class="chart-position">Peak Position: </p>
+              <p class="chart-position">Peak Position:</p>
             </div>
             <div class="vs">Banger or Clanger?</div>
             <div class="card">
-              <img src="" alt="">
+              <img src="" alt="" />
               <h3></h3>
               <p></p>
               <audio controls src=""></audio>
@@ -135,10 +134,23 @@
         </div>
         <div id="game-over" class="card">
           <h2>Game Over!</h2>
-      <p id="score"></p>
-      <p>Thanks for playing!</p>
-      <p>If you'd like to play again, select a new year from the dropdown above.</p>
-      
+          <p id="score"></p>
+          <p>Thanks for playing!</p>
+          <p>
+            If you'd like to play again, select a new year from the dropdown
+            above.
+          </p>
+          <div id="fb-share">
+            <div id="fb-share-button">
+              <svg viewBox="0 0 12 12" preserveAspectRatio="xMidYMid meet">
+                <path
+                  class="svg-icon-path"
+                  d="M9.1,0.1V2H8C7.6,2,7.3,2.1,7.1,2.3C7,2.4,6.9,2.7,6.9,3v1.4H9L8.8,6.5H6.9V12H4.7V6.5H2.9V4.4h1.8V2.8 c0-0.9,0.3-1.6,0.7-2.1C6,0.2,6.6,0,7.5,0C8.2,0,8.7,0,9.1,0.1z"
+                ></path>
+              </svg>
+              <span>Share</span>
+            </div>
+          </div>
         </div>
       </section>
     </main>
