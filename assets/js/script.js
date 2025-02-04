@@ -3,10 +3,31 @@ let songs = []; // Global array to store songs
 let currentIndex = 0; // Track which song we're on
 let score = 0; // Track correct answers
 let gameSongs = []; // Will hold the 11 random songs
+lastScoreDisplay(); // Display last score if available
 
-// Get the selected year from the dropdown
-document.getElementById("yearDropdown").addEventListener("change", function () {
-  const selectedYear = this.value;
+// Function to display the last score if available (stored locally)
+function lastScoreDisplay() {
+  let scoreUpdate = document.getElementById("game-intro");
+  if (localStorage.getItem("score")) {
+    const scoreUpdateParagraph = document.createElement("p");
+    scoreUpdateParagraph.id="previous-score";
+    if (document.getElementById("previous-score")) {
+      document.getElementById("previous-score").remove();
+    };
+    scoreUpdateParagraph.textContent = `Your last score was ${localStorage.getItem("score")} / 10. Can you beat it?`;
+    scoreUpdate.appendChild(scoreUpdateParagraph);
+  }
+}
+
+// Start Game Function
+function startGame() {
+  // Get the selected year from the dropdown
+  const selectedYear = document.getElementById("yearDropdown").value;
+  console.log(selectedYear);
+  if (selectedYear === "placeholder") {
+    alert("Please select a year to start the game.");
+    return;
+  }
 
   // Reset Global Variables since we have changed years.
   songs = [];
@@ -14,22 +35,8 @@ document.getElementById("yearDropdown").addEventListener("change", function () {
   score = 0;
   gameSongs = [];
   document.getElementById("song-container").style.display = "none";
-// Get the songs for the selected year
-  fetchSongs(selectedYear);
-});
 
-// Start Game Function
-function startGame() {
-  // Runs functions to get random songs and display the first and second song  
-  gameSongs = getRandomSongs();
-  showNextSong();
-  // Show game container and hide game-over message
-  document.getElementById("song-container").style.display = "block"; 
-  document.getElementById("game-over").style.display = "none"; 
-}
-
-// Gathers songs from JSON file according to selected year
-function fetchSongs(selectedYear) {
+  // Fetch songs from JSON file and get 11 random songs
   fetch(`./assets/json/Songs/${selectedYear}-EOY-Songs.json`)
     .then((response) => response.json())
     .then((data) => {
@@ -42,8 +49,32 @@ function fetchSongs(selectedYear) {
           audio: song.audioSrc,
         })
       );
+      gameSongs = getRandomSongs();
+      showNextSong();
+    
+      // Show game container and hide game-over message
+      document.getElementById("song-container").style.display = "block"; 
+      document.getElementById("game-over").style.display = "none"; 
     });
+  
 }
+
+// Gathers songs from JSON file according to selected year
+// function fetchSongs(selectedYear) {
+//   fetch(`./assets/json/Songs/${selectedYear}-EOY-Songs.json`)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       songs = data.content.sections[0].content[0].content[0].chartItems.map(
+//         (song) => ({
+//           title: song.title,
+//           artist: song.artist,
+//           peak: song.peak, // The highest position on the chart
+//           image: song.imageSrcSmall,
+//           audio: song.audioSrc,
+//         })
+//       );
+//     });
+// }
 
 // Function to get 11 random songs from the songs array (1 start and 10 questions)
 function getRandomSongs(count = 11) {
@@ -155,9 +186,10 @@ function guess(playerGuess, currentPeak, nextPeak) {
 function endGame() {
   document.getElementById("song-container").style.display = "none"; // Hide game UI
   document.getElementById("game-over").style.display = "block"; // Show game-over message
-  document.getElementById(
-    "score"
-  ).innerHTML = `<p>Your score: ${score} / 10</p>`;
+  document.getElementById("score").innerHTML = `<p>Your score: ${score} / 10</p>`;
+
+  localStorage.setItem("score", score); // Store score in local storage
+  lastScoreDisplay(); // Display last score
 
   // Reset Global Variables
   songs = [];
@@ -167,26 +199,26 @@ function endGame() {
   yearDropdown.selectedIndex = 0; // Reset dropdown to default to force player to select a new year
 }
 
-const yearDropdown = document.getElementById("yearDropdown");
-let selectedYear = yearDropdown.options[yearDropdown.selectedIndex].value;
+// const yearDropdown = document.getElementById("yearDropdown");
+// let selectedYear = yearDropdown.options[yearDropdown.selectedIndex].value;
 
-yearDropdown.addEventListener("change", function () {
-  selectedYear = yearDropdown.options[yearDropdown.selectedIndex].value;
-});
+// yearDropdown.addEventListener("change", function () {
+//   selectedYear = yearDropdown.options[yearDropdown.selectedIndex].value;
+// });
 
-const fbButton = document.getElementById("fb-share-button");
-const url = window.location.href;
+// const fbButton = document.getElementById("fb-share-button");
+// const url = window.location.href;
 
-fbButton.addEventListener("click", function () {
-  const score = document.getElementById("score").innerText;
-  const message = `I just got ${score} on my knowledge of ${selectedYear} chart music. Think you can do better?`;
-  window.open(
-    "https://www.facebook.com/sharer/sharer.php?u=" +
-      encodeURIComponent(url) +
-      "&quote=" +
-      encodeURIComponent(message),
-    "facebook-share-dialog",
-    "width=800,height=600"
-  );
-  return false;
-});
+// fbButton.addEventListener("click", function () {
+//   const score = document.getElementById("score").innerText;
+//   const message = `I just got ${score} on my knowledge of ${selectedYear} chart music. Think you can do better?`;
+//   window.open(
+//     "https://www.facebook.com/sharer/sharer.php?u=" +
+//       encodeURIComponent(url) +
+//       "&quote=" +
+//       encodeURIComponent(message),
+//     "facebook-share-dialog",
+//     "width=800,height=600"
+//   );
+//   return false;
+// });
