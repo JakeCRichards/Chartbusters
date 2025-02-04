@@ -9,7 +9,7 @@ document.getElementById("yearDropdown").addEventListener("change", function() {
 });
 
 function fetchSongs(selectedYear) {
-  fetch(`../assets/json/Songs/${selectedYear}-EOY-Songs.json`)
+  fetch(`/assets/json/Songs/${selectedYear}-EOY-Songs.json`)
     .then((response) => response.json())
     .then((data) => {
       songs = data.content.sections[0].content[0].content[0].chartItems.map(
