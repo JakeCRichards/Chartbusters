@@ -62,7 +62,9 @@ footer {
 }
 
 /* Custom CSS for home page */
-
+.home-page {
+    background-color: var(--primary-color);
+}
 
 /* CSS for game page */
 
