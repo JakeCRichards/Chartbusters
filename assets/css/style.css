@@ -5,10 +5,11 @@
 :root {
     /* --primary-font: 
     --secondary-font:  */
-    --primary-color: #530224; /* neon pink */
-    --secondary-color: #318ec4; /* light blue */
-    --highlight-color: #416a8e; /* dark blue */
-    --highlight-color-light: #7a9fc2; /* light blue */
+    --primary-color: #0cc3eb; /* light blue */
+    --secondary-color: #183650; /* dark blue */
+    --tertary-color: #e3d050; /* bright yellow*/
+    --highlight-color: #d72cc4; /* neon pink */
+    --highlight-color-light: #681e66; /* deep pink */
 }
 
 .header-logo {
@@ -138,9 +139,4 @@
 
 /* Hide peak position text */
 .game-page .chart-position.hidden {
-    visibility: hidden;
-}
-
-#song-container {
-    display: none;
-}
+    visibility: h
