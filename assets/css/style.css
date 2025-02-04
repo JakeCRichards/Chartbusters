@@ -1,20 +1,10 @@
 /* CSS Variables */
 :root {
-<<<<<<< HEAD
     --primary-color: #0cc3eb; /* light blue */
     --secondary-color: #183650; /* dark blue */
-    --tertiary-color: #e3d050; /* bright yellow*/
+    --tertiary-color: #e3d050; /* bright yellow */
     --highlight-color: #d72cc4; /* neon pink */
     --highlight-color-light: #681e66; /* deep pink */
-=======
-  /* --primary-font: 
-    --secondary-font:  */
-  --primary-color: #0cc3eb; /* light blue */
-  --secondary-color: #183650; /* dark blue */
-  --tertary-color: #e3d050; /* bright yellow*/
-  --highlight-color: #d72cc4; /* neon pink */
-  --highlight-color-light: #681e66; /* deep pink */
->>>>>>> main
 }
 
 html,
@@ -26,12 +16,9 @@ body {
 }
 
 body {
-<<<<<<< HEAD
     flex: 1;
     font-family: 'Orbitron', sans-serif;
-=======
-  flex: 1;
->>>>>>> main
+    color: #e3d050; /* Change font color to bright yellow */
 }
 
 main {
@@ -54,21 +41,12 @@ footer {
 }
 
 .header-logo {
-<<<<<<< HEAD
     color: var(--primary-color);
     font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
     padding: 50px 0; 
     margin-bottom: 20px;
-=======
-  color: var(--primary-color);
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 50px 0;
-  margin-bottom: 20px;
->>>>>>> main
 }
 
 .game-intro {
@@ -83,14 +61,8 @@ footer {
 }
 
 #intro {
-<<<<<<< HEAD
     text-align: center;
     margin-bottom: 40px;
-=======
-  text-align: center;
-  margin-bottom: 40px;
-  /* border: 2px solid var(--highlight-color); */ /* Remove this line */
->>>>>>> main
 }
 
 #Instructions {
@@ -98,18 +70,13 @@ footer {
   /* border: 2px solid var(--highlight-color); */ /* Remove this line */
 }
 
-<<<<<<< HEAD
 #instructions .game-intro {
     width: 40%; /* Adjust the width as needed */
     margin: 0 auto; /* Center the element */
     text-align: auto; /* Center the text */
     border: 4px solid var(--tertiary-color);
-=======
-#Instructions .game-intro {
-  width: 50%; /* Adjust the width as needed */
-  margin: 0 auto; /* Center the element */
-  text-align: auto; /* Center the text */
->>>>>>> main
+    color:#e3d050; /* Change font color to bright yellow */
+    font-family: "Orbitron", sans-serif;
 }
 
 /* Custom CSS for home page */
@@ -120,6 +87,14 @@ footer {
 }
 
 /* CSS for game page */
+.game-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+      url("../images/keyboard.jpg") center center/cover no-repeat fixed;
+  }
 
 /* General page styling */
 .game-page body {
@@ -268,7 +243,6 @@ button:disabled:hover {
   background: #213a6f;
 }
 
-<<<<<<< HEAD
 #fb-share-button svg {
     width: 18px;
     fill: white;
@@ -281,41 +255,63 @@ button:disabled:hover {
     color: white;
     font-size: 14px;
     padding: 0 3px
-=======
-#game-over {
-  display: none;
 }
 
-/* Media Queries */
-
-/* Only mobiles */
-
-@media (max-width: 767px) {
-  /* Song image */
-  .game-page .card img {
-    display: none;
-  }
+.game-page .game-over-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
 }
 
-/* Tablets and larger */
+.game-page .game-over-screen h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
 
-@media (min-width: 768px) {
-  .game-page .game-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  #song1 {
-    order: 0;
-  }
+.game-page .game-over-screen p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
 
-  #song2 {
-    order: 1;
-  }
+.game-page .game-over-screen .play-again-btn {
+  background: var(--highlight-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
 
-  #vs {
-    order: 2;
-    width: 60%;
-  }
->>>>>>> main
+.game-page .game-over-screen .play-again-btn:hover {
+  background: var(--highlight-color-light);
+}
+
+.game-over-screen {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--tertiary-color);
+}
+
+.play-again-btn {
+    background-color: var(--highlight-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.play-again-btn:hover {
+    background-color: var(--highlight-color-light);
 }
