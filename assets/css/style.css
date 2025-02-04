@@ -144,3 +144,9 @@
 #song-container {
     display: none;
 }
+
+#game-over {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}

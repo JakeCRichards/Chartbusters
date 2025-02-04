@@ -31,7 +31,9 @@ function fetchSongs(selectedYear) {
 function startGame() {
     gameSongs = getRandomSongs();
     showNextSong();
-    document.getElementById('song-container').style.display = "block"; // Show container
+    document.getElementById("song-container").style.display = "block";
+    document.getElementById("game-over").style.display = "none"; // Hide game-over message
+    document.getElementById("cardContainer").innerHTML = ""; // Clear old cards
   }
   
   function getRandomSongs(count = 11) {
@@ -60,7 +62,12 @@ function startGame() {
           <audio controls src="${currentSong.audio}"></audio>
           <p class="chart-position">Peak Position: ${currentSong.peak}</p>
         </div>
-        <div class="vs">Banger or Clanger?</div>
+        <div class="vs">Banger or Clanger?
+        <p>Did the next song chart **Higher**, **Lower**, or **The Same**?</p>
+        <button onclick="guess('higher', ${currentSong.peak}, ${nextSong.peak})">Higher</button>
+        <button onclick="guess('lower', ${currentSong.peak}, ${nextSong.peak})">Lower</button>
+        <button onclick="guess('same', ${currentSong.peak}, ${nextSong.peak})">Same</button>
+        </div>
         <div class="card">
           <img src="${nextSong.image}" alt="${nextSong.title}">
           <h3>${nextSong.title}</h3>
@@ -69,12 +76,7 @@ function startGame() {
           <p class="chart-position hidden">Peak Position: ???</p>
         </div>
       </div>
-      <div class="question">
-        <p>Did the next song chart **Higher**, **Lower**, or **The Same**?</p>
-        <button onclick="guess('higher', ${currentSong.peak}, ${nextSong.peak})">Higher</button>
-        <button onclick="guess('lower', ${currentSong.peak}, ${nextSong.peak})">Lower</button>
-        <button onclick="guess('same', ${currentSong.peak}, ${nextSong.peak})">Same</button>
-      </div>
+      
     `;
   }
   
@@ -97,9 +99,10 @@ function startGame() {
   }
   
   function endGame() {
-    document.getElementById("song-container").innerHTML = `
-      <h2>Game Over!</h2>
-      <p>Your score: ${score} / 10</p>
-      <button onclick="startGame()">Play Again</button>
-    `;
-  }
+    document.getElementById("game-over").style.display = "block"; // Show game-over message
+    document.getElementById("score").innerHTML = `
+            <p>Your score: ${score} / 10</p>
+      `;
+    document.getElementById("song-container").style.display = "none"; // Hide game UI
+    document.getElementById("buttons").style.display = "none"; 
+}
