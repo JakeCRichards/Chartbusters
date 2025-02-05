@@ -8,7 +8,7 @@
   --tertiary-color: #e3d050; /* bright yellow */
   --highlight-color: #d72cc4; /* neon pink */
   --primary-font: "Orbitron", sans-serif;
-  --button-colour: #0cc3eb;
+  --button-colour: #085B6E;
 }
 
 html,
@@ -24,6 +24,7 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
     url("../images/keyboard.jpg") center center/cover no-repeat fixed;
     font-family: var(--primary-font);
+    min-height: 100vh;
 }
 
 main {
@@ -109,9 +110,9 @@ footer {
 
 /* CSS for game page */
 .game-page {
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  /* justify-content: center; */
+  /* align-items: center; */
+  
 }
 
 /* Card styling */
