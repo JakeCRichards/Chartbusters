@@ -37,19 +37,20 @@ section {
 footer {
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  padding: 20px;
   text-align: center;
   width: 100%;
   font-size: 1.5rem;
+  height: 5rem;
+  margin-bottom: 0;
 }
 
 /* This is where formatting for logo should be */
 .header-logo {
   background: url("../images/cb_logo.png") no-repeat center center/cover;
-  padding: 50px 0;
+  padding: 20px; 
   width: 200px;
   height: 200px;
-  margin: 2rem auto;
+  margin: 50px;
 }
 
 .game-intro {
@@ -80,8 +81,13 @@ footer {
   color: white;
 }
 
-.accordion-button {
+#accordion-button {
   text-align: center;
+  max-width: 95%;
+}
+
+#accordion-button button:hover{
+  background-color: none;
 }
 
 /* Accordion */
@@ -103,7 +109,6 @@ footer {
 
 /* CSS for game page */
 .game-page {
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -157,24 +162,34 @@ footer {
 
 .notifications {
   color: white;
+  
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Buttons */
 .game-page button {
-  background: var(--highlight-color);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.3s;
+background: var(--highlight-color);
+color: white;
+border: none;
+padding: 10px 20px;
+margin: 5px;
+border-radius: 8px;
+font-size: 1.2rem;
+cursor: pointer;
+transition: all 0.3s;
+max-width: 80%;
 }
 
 .game-page button:hover {
   background: #d72cc34b;
 }
+
+
 
 button:disabled,
 button:disabled:hover {
