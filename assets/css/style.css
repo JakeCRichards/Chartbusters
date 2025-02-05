@@ -108,20 +108,19 @@ footer {
 }
 
 /* Card styling */
-.game-wrapper * {
-  border: 2px solid #333;
-}
+
 
 .game-page .card {
-  background: rgb(184, 1, 1);
+  background: white;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 20px 20px;
+  margin: 0;
   text-align: center;
   transition: transform 0.3s ease-in-out;
   flex-grow: 1;
   align-items: center;
+  border: 2px solid var(--highlight-color);
 }
 
 .game-page .card:hover {
@@ -132,8 +131,8 @@ footer {
 .game-page .card img {
   border-radius: 50%;
   border: 2px solid #333;
-  height: 15rem;
   width: 15rem;
+  height: auto;
 }
 
 /* Song title */

@@ -5,21 +5,26 @@ let score = 0; // Track correct answers
 let gameSongs = []; // Will hold the 11 random songs
 lastScoreDisplay(); // Display last score if available
 
+
 // Function to display the last score if available (stored locally)
 function lastScoreDisplay() {
   let scoreUpdate = document.getElementById("game-intro");
   let previousScore = localStorage.getItem("score");
-  
+
   if (previousScore) {
     const scoreUpdateParagraph = document.createElement("p");
-    scoreUpdateParagraph.id="previous-score";
+    scoreUpdateParagraph.id = "previous-score";
     if (document.getElementById("previous-score")) {
       document.getElementById("previous-score").remove();
-    };
+    }
     if (previousScore < 10) {
-    scoreUpdateParagraph.textContent = `Your last score was ${localStorage.getItem("score")} / 10. Can you beat it?`;
+      scoreUpdateParagraph.textContent = `Your last score was ${localStorage.getItem(
+        "score"
+      )} / 10. Can you beat it?`;
     } else if (previousScore == 10) {
-      scoreUpdateParagraph.textContent = `Congratulations! You previously scored ${localStorage.getItem("score")} / 10. Can you do it again?`;
+      scoreUpdateParagraph.textContent = `Congratulations! You previously scored ${localStorage.getItem(
+        "score"
+      )} / 10. Can you do it again?`;
     }
     scoreUpdate.appendChild(scoreUpdateParagraph);
   }
@@ -29,7 +34,6 @@ function lastScoreDisplay() {
 function startGame() {
   // Get the selected year from the dropdown
   const selectedYear = document.getElementById("yearDropdown").value;
-  console.log(selectedYear);
   if (selectedYear === "placeholder") {
     alert("Please select a year to start the game.");
     return;
@@ -57,12 +61,11 @@ function startGame() {
       );
       gameSongs = getRandomSongs();
       showNextSong();
-    
+
       // Show game container and hide game-over message
-      document.getElementById("song-container").style.display = "block"; 
-      document.getElementById("game-over").style.display = "none"; 
+      document.getElementById("song-container").style.display = "block";
+      document.getElementById("game-over").style.display = "none";
     });
-  
 }
 
 // Function to get 11 random songs from the songs array (1 start and 10 questions)
@@ -87,47 +90,64 @@ function showNextSong() {
 
   // Display the current and next song in the game
   document.getElementById("song-container").innerHTML = `
-      <div class="game-wrapper row">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="${currentSong.image}" alt="${currentSong.title}">
-          <h3>${currentSong.title}</h3>
-          <p>by ${currentSong.artist}</p>
-          <audio controls src="${currentSong.audio}"></audio>
-          <p class="chart-position">Peak Position: ${currentSong.peak}</p>
-        </div> 
-        </div> 
-        <div class="col-md-4">
-        <div class="vs">
-        <h3>Banger or Clanger?</h3>
-        <h4>Did the next song chart 
-        <br>
-        <strong>Higher, Lower, or the Same</strong>?</h4>
+      <div class="game-wrapper row align-items-center">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="row align-items-center">
+        <div class="col-5 col-md-12 image-container">
 
-        <button class="game-button" onclick="guess('lower', ${currentSong.peak}, ${nextSong.peak})">Lower</button>
-        <button class="game-button" onclick="guess('same', ${currentSong.peak}, ${nextSong.peak})">Same</button>
-        <button class="game-button" onclick="guess('higher', ${currentSong.peak}, ${nextSong.peak})">Higher</button>
+          <img src="${currentSong.image}" alt="${currentSong.title}" class="object-fit-contain object-fit-sm-none img-fluid">
+        </div>
+      
+      <div class="col-7 col-md-12">
+        <h3>${currentSong.title}</h3>
+        <p>by ${currentSong.artist}</p>
+        <audio controls src="${currentSong.audio}"></audio>
+        <p class="chart-position">Peak Position: ${currentSong.peak}</p>
+      </div>
+      </div>
+    </div>
+  </div>
 
-        <div id="notifications" class="row m-auto"></div>
-        
-        <div class="row m-auto">
-        
-        <p id="score-tracking">Score: ${score} / 10</p>
-        </div>
-        </div>
-        </div>
-        
-        <div class="col-md-4">
-        <div class="card">
-          <img src="${nextSong.image}" alt="${nextSong.title}">
-          <h3>${nextSong.title}</h3>
-          <p>by ${nextSong.artist}</p>
-          <audio controls src="${nextSong.audio}"></audio>
-          <p class="chart-position hidden">Peak Position: ???</p>
-        </div>
-        </div>
+<div class="col-md-4">
+  <div class="vs">
+    <h3>Banger or Clanger?</h3>
+    <h4>Did the next song chart
+      <br>
+      <strong>Lower, The Same, or Higher</strong>?
+    </h4>
 
-      </div>   
+    <button class="game-button" onclick="guess('lower', ${currentSong.peak}, ${nextSong.peak})">Lower</button>
+    <button class="game-button" onclick="guess('same', ${currentSong.peak}, ${nextSong.peak})">Same</button>
+    <button class="game-button" onclick="guess('higher', ${currentSong.peak}, ${nextSong.peak})">Higher</button>
+
+    <div id="notifications" class="row m-auto"></div>
+
+    <div class="row m-auto">
+
+      <p id="score-tracking">Score: ${score} / 10</p>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4">
+  <div class="card">
+  <div class="row align-items-center">
+        <div class="col-5 col-md-12 image-container">
+    <img src="${nextSong.image}" alt="${nextSong.title}" class="object-fit-contain object-fit-sm-none img-fluid">
+    </div>
+      
+      <div class="col-7 col-md-12">
+    <h3>${nextSong.title}</h3>
+    <p>by ${nextSong.artist}</p>
+    <audio controls src="${nextSong.audio}"></audio>
+    <p class="chart-position hidden">Peak Position: ???</p>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
     `;
 }
 
@@ -180,7 +200,9 @@ function guess(playerGuess, currentPeak, nextPeak) {
 function endGame() {
   document.getElementById("song-container").style.display = "none"; // Hide game UI
   document.getElementById("game-over").style.display = "block"; // Show game-over message
-  document.getElementById("score").innerHTML = `<p>Your score: ${score} / 10</p>`;
+  document.getElementById(
+    "score"
+  ).innerHTML = `<p>Your score: ${score} / 10</p>`;
 
   localStorage.setItem("score", score); // Store score in local storage
   lastScoreDisplay(); // Display last score
