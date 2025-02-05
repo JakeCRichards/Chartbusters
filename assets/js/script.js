@@ -65,23 +65,6 @@ function startGame() {
   
 }
 
-// Gathers songs from JSON file according to selected year
-// function fetchSongs(selectedYear) {
-//   fetch(`./assets/json/Songs/${selectedYear}-EOY-Songs.json`)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       songs = data.content.sections[0].content[0].content[0].chartItems.map(
-//         (song) => ({
-//           title: song.title,
-//           artist: song.artist,
-//           peak: song.peak, // The highest position on the chart
-//           image: song.imageSrcSmall,
-//           audio: song.audioSrc,
-//         })
-//       );
-//     });
-// }
-
 // Function to get 11 random songs from the songs array (1 start and 10 questions)
 function getRandomSongs(count = 11) {
   const validSongs = songs.filter(
@@ -104,16 +87,18 @@ function showNextSong() {
 
   // Display the current and next song in the game
   document.getElementById("song-container").innerHTML = `
-      <div class="game-wrapper">
-        <div class="card col-md-3 col-lg-4">
+      <div class="game-wrapper row">
+      <div class="col-md-4">
+        <div class="card">
           <img src="${currentSong.image}" alt="${currentSong.title}">
           <h3>${currentSong.title}</h3>
           <p>by ${currentSong.artist}</p>
           <audio controls src="${currentSong.audio}"></audio>
           <p class="chart-position">Peak Position: ${currentSong.peak}</p>
         </div> 
-        
-        <div class="vs col-md-3 col-lg-4">
+        </div> 
+        <div class="col-md-4">
+        <div class="vs">
         <h3>Banger or Clanger?</h3>
         <h4>Did the next song chart 
         <br>
@@ -130,13 +115,16 @@ function showNextSong() {
         <p id="score-tracking">Score: ${score} / 10</p>
         </div>
         </div>
+        </div>
         
-        <div class="card col-md-3 col-lg-4">
+        <div class="col-md-4">
+        <div class="card">
           <img src="${nextSong.image}" alt="${nextSong.title}">
           <h3>${nextSong.title}</h3>
           <p>by ${nextSong.artist}</p>
           <audio controls src="${nextSong.audio}"></audio>
           <p class="chart-position hidden">Peak Position: ???</p>
+        </div>
         </div>
 
       </div>   
