@@ -59,15 +59,46 @@
       <section class="text-center">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-8 game-intro">
-              <h2>Let battle commence</h2>
+            <div id="game-intro" class="col-8 game-intro">
+              <h2>Who rules the charts?</h2>
+              <p>Reckon you can tell a chart topper from a chart flopper?</p>
+              
+              <div class="accordion m-auto" id="rulesAccordion">
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Want to see how to play? Click here!
+                    </button>
+                  </h3>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <ol>
+                        <li>Pick a year and start game</li>
+                        <li>Look at the artist and song</li>
+                        <li>Decide whether the next song was higher, lower or the same for it's peak chart position</li>
+                        <li>Achieve the highest score you can over 10 songs</li>
+                        <li>Share with friends</li>
+                      </ol>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
               <p>
-                Ever wondered who really is the king or queen of pop? Now is your chance to find out.
-                Choose a year and test your knowledge. 
-                <br />
-
-                <br />
-                Share your results. Share the glory.
+                Use your ultimate music knowledge to see where a tune peaked
+                against its chart rival and settle old scores with your pop
+                foes.
               </p>
               <select class="form-select text-center" id="yearDropdown">
                 <option value="placeholder">Select Year</option>
@@ -101,7 +132,12 @@
                 <option value="2023">2023</option>
                 <option value="2024">2024</option>
               </select>
-              <button class="btn btn-primary" onclick="startGame()">
+              <button
+                id="start-game-button"
+                type="button"
+                class="btn btn-primary"
+                onclick="startGame()"
+              >
                 Start Game
               </button>
             </div>
@@ -109,11 +145,8 @@
         </div>
       </section>
       <section class="text-center">
-        <div id="song-container" >
-          
-        </div>
-        
-        
+        <div id="song-container" class="container"></div>
+
         <div id="game-over">
           <h2>Game Over!</h2>
           <p id="score"></p>
@@ -121,6 +154,12 @@
           <p>
             If you'd like to play again, select a new year from the dropdown
             above.
+          </p>
+          <p>
+            Share your results. Share the glory.
+            <br />
+            Reckon your knowledge is worth sharing? Hit the button below to
+            share your score with your friends.
           </p>
           <div id="fb-share">
             <div id="fb-share-button">
@@ -137,7 +176,7 @@
       </section>
     </main>
 
-    <footer class="bg-dark text-lg-start text-white">
+    <footer>
       <div class="container-fluid mt-4">
         <div class="row">
           <div class="col-12 text-center py-3">
