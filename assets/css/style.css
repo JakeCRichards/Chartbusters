@@ -4,61 +4,64 @@
   --secondary-color: #183650; /* dark blue */
   --tertiary-color: #e3d050; /* bright yellow */
   --highlight-color: #d72cc4; /* neon pink */
-  --highlight-color-light: #681e66; /* deep pink */
+  --primary-font: 'Orbitron', sans-serif;
+}
+
+html {
+  font-family: var(--primary-font);
+}
+
+#song-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  
+
 }
 
 #navbar {
-  background-color: var(--secondary-color);
-  color: #681e66;
+  background-color: #681e66; /* Change background color to deep pink */
+  color: #ffffff; /* Change text color to white for better contrast */
   padding: 20px;
   text-align: center;
 }
 
-.navbar {
-  background-color: var(--secondary-color);
-  color: #681e66;
+.navbar-brand {
+  background-color: #681e66; /* Change background color to deep pink */
+  color: #ffffff; /* Change text color to white for better contrast */
 }
 
 html,
 body {
-height: 100%;
-margin: 0;
-display: flex;
-flex-direction: column;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
+/*
 body {
-  flex: 1;
-  font-family: 'Orbitron', sans-serif;
-  color: #e3d050; /* Change font color to bright yellow */
 }
+*/
 
 main {
-flex: 1;
+  flex: 1;
 }
 
 section {
-padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 footer {
-background-color: var(--secondary-color);
-color: var(--primary-color);
-padding: 20px;
-text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 20px;
+  text-align: center;
 }
 
 #home {
-color: #ffffff;
+  color: #ffffff;
 }
 
 .header-logo {
-color: var(--primary-color);
-font-size: 2rem;
-font-weight: bold;
-text-transform: uppercase;
-padding: 10px 0;
-margin-bottom: 20px;
   color: var(--primary-color);
   font-size: 2rem;
   font-weight: bold;
@@ -68,38 +71,52 @@ margin-bottom: 20px;
 }
 
 .game-intro {
-background-color: var(--secondary-color);
-color: var(--primary-color);
-padding: 20px;
-border-radius: 10px;
-margin-bottom: 20px;
-border: 4px solid var(--highlight-color);
-width: 90%; /* Adjust the width as needed */
-margin: 0 auto; /* Center the element */
-font-size: 1.5rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 4px solid var(--highlight-color);
+  width: 90%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the element */
+  font-size: 1.5rem;
+}
+
+#start-game-button {
+  background-color: #0cc3eb;
+}
+
+.game-intro h2 {
+  font-size: 1.33rem; /* Adjust the font size as needed */
+}
+
+.game-intro p,
+.game-intro ol {
+  font-size: 1rem; /* Adjust the font size as needed */
 }
 
 .form-select {
-width: 60%;
-margin: auto;
-margin-bottom: 20px;
-font-size: 1.5rem;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
 }
 
 #intro {
   text-align: center;
   margin-bottom: 40px;
+  font-size: 1.5rem; /* Increase the font size */
 }
 
 #Instructions {
-text-align: center;
-/* border: 2px solid var(--highlight-color); */ /* Remove this line */
+  text-align: center;
+  font-size: 1.5rem; /* Increase the font size */
 }
 
 #Instructions .game-intro {
-width: 80%; /* Adjust the width as needed */
-margin: 0 auto; /* Center the element */
-text-align: auto; /* Center the text */
+  width: 80%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the element */
+  text-align: auto; /* Center the text */
 }
 
 #instructions .game-intro {
@@ -107,8 +124,10 @@ text-align: auto; /* Center the text */
   margin: 0 auto; /* Center the element */
   text-align: auto; /* Center the text */
   border: 4px solid var(--tertiary-color);
-  color:#e3d050; /* Change font color to bright yellow */
-  font-family: "Orbitron", sans-serif;
+}
+
+#Instructions ol {
+  font-size: 1.2rem; /* Increase the font size for the list items */
 }
 
 /* Custom CSS for home page */
@@ -270,7 +289,6 @@ background: #3b5998;
 border-radius: 3px;
 font-weight: 600;
 padding: 5px 8px;
-display: inline-block;
 position: static;
 text-align: center;
 }
@@ -285,9 +303,7 @@ cursor: pointer;
 background: #213a6f;
 }
 
-#game-over {
-display: none;
-}
+
 
 #game-over {
 width: 90%;
@@ -297,6 +313,11 @@ border-radius: 12px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 text-align: center;
 transition: transform 0.3s ease-in-out;
+display: none;
+}
+
+.play-now-btn {
+  font-size: 1.2rem; /* Increase the font size for the button */
 }
 
 /* Media Queries */
