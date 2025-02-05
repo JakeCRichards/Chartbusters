@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,51 +10,37 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body class="d-flex flex-column min-vh-100 game-page">
-    
-
-    
-    <header>
+    <header class="align-self-center">
       <div class="header-logo">
       </div>
     </header>
 
     <main>
+
       <section class="text-center">
         <div class="container-fluid">
           <div class="row justify-content-center">
             <div id="game-intro" class="col-8 game-intro">
               <h2>Who rules the charts?</h2>
               <p>Reckon you can tell a chart topper from a chart flopper?</p>
-              
-              <div class="accordion m-auto" id="rulesAccordion" aria-labelledby="rulesHeading">
+
+              <div class="accordion m-auto" id="rulesAccordion">
                 <div class="accordion-item">
-                  <h3 id="rulesHeading" class="accordion-header">
-                    <button
-                      class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseOne" id="accordion-button"
-                    >
+                  <h3 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                      id="accordion-button">
+
                       Want to see how to play? Click here!
                     </button>
                   </h3>
-                  <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#accordionExample"
-                  >
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                       <ol>
                         <li>Pick a year and start game</li>
@@ -61,7 +49,7 @@
                         <li>Achieve the highest score you can over 10 songs</li>
                         <li>Share with friends</li>
                       </ol>
-                      
+
                     </div>
                   </div>
                 </div>
@@ -103,11 +91,7 @@
                 <option value="2023">2023</option>
                 <option value="2024">2024</option>
               </select>
-              <button
-                id="start-game-button"
-                type="button"
-                class="btn btn-primary"
-                onclick="startGame()">
+              <button id="start-game-button" type="button" class="btn btn-primary" onclick="startGame()">
                 Start Game
               </button>
             </div>
@@ -126,15 +110,17 @@
             above.
           </p>
           <p>
-            Share your results. Share the glory!
+            Share your results. Share the glory.
+            <br />
+            Reckon your knowledge is worth sharing? Hit the button below to
+            share your score with your friends.
           </p>
           <div id="fb-share">
             <div id="fb-share-button">
               <svg viewBox="0 0 12 12" preserveAspectRatio="xMidYMid meet">
-                <path
-                  class="svg-icon-path"
-                  d="M9.1,0.1V2H8C7.6,2,7.3,2.1,7.1,2.3C7,2.4,6.9,2.7,6.9,3v1.4H9L8.8,6.5H6.9V12H4.7V6.5H2.9V4.4h1.8V2.8 c0-0.9,0.3-1.6,0.7-2.1C6,0.2,6.6,0,7.5,0C8.2,0,8.7,0,9.1,0.1z"
-                ></path>
+                <path class="svg-icon-path"
+                  d="M9.1,0.1V2H8C7.6,2,7.3,2.1,7.1,2.3C7,2.4,6.9,2.7,6.9,3v1.4H9L8.8,6.5H6.9V12H4.7V6.5H2.9V4.4h1.8V2.8 c0-0.9,0.3-1.6,0.7-2.1C6,0.2,6.6,0,7.5,0C8.2,0,8.7,0,9.1,0.1z">
+                </path>
               </svg>
               <span>Share</span>
             </div>
@@ -144,7 +130,7 @@
     </main>
 
     <footer>
-      <div class="container-fluid mt-4">
+      <div class="container-fluid py-3">
         <div class="row">
           <div class="col-12 text-center">
             <p>&copy; 2025 Chartbusters</p>
@@ -154,16 +140,11 @@
     </footer>
 
     <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/bf5526169d.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/bf5526169d.js" crossorigin="anonymous"></script>
     <!-- Bootstrap JS Link -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
     <script>
       document
@@ -189,4 +170,5 @@
     <!-- Other JavaScript -->
     <script src="assets/js/script.js"></script>
   </body>
+
 </html>
