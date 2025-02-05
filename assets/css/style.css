@@ -5,6 +5,7 @@
   --tertiary-color: #e3d050; /* bright yellow */
   --highlight-color: #d72cc4; /* neon pink */
   --primary-font: 'Orbitron', sans-serif;
+  --button-colour: #0cc3eb;
 }
 
 html {
@@ -17,17 +18,6 @@ html {
 
 }
 
-#navbar {
-  background-color: #681e66; /* Change background color to deep pink */
-  color: #ffffff; /* Change text color to white for better contrast */
-  padding: 20px;
-  text-align: center;
-}
-
-.navbar-brand {
-  background-color: #681e66; /* Change background color to deep pink */
-  color: #ffffff; /* Change text color to white for better contrast */
-}
 
 html,
 body {
@@ -35,16 +25,17 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-}
+  }
 
-/*
 body {
+  background-color: var(--secondary-color);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+  url("../images/keyboard.jpg") center center/cover no-repeat fixed;
 }
-*/
 
 main {
   flex: 1;
-}
+} 
 
 section {
   padding-bottom: 1rem;
@@ -55,14 +46,12 @@ footer {
   color: var(--primary-color);
   padding: 20px;
   text-align: center;
+  width: 100%;
 }
 
-#home {
-  color: #ffffff;
-}
-
+/* This is where formatting for logo should be */
 .header-logo {
-  color: var(--primary-color);
+  color: white;
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -76,66 +65,50 @@ footer {
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
-  border: 4px solid var(--highlight-color);
+  border: 8px solid var(--highlight-color);
   width: 90%; /* Adjust the width as needed */
   margin: 0 auto; /* Center the element */
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 #start-game-button {
-  background-color: #0cc3eb;
+  background-color: var(--button-colour);
 }
 
-.game-intro h2 {
-  font-size: 1.33rem; /* Adjust the font size as needed */
-}
-
-.game-intro p,
+/* Accordion text */
 .game-intro ol {
   font-size: 1rem; /* Adjust the font size as needed */
+  background-color: var(--button-colour);
+  color: white;
 }
 
+.accordion-item {
+  background-color: var(--button-colour);
+  color: white;
+}
+
+.accordion-button {
+  text-align: center;
+}
+
+/* Accordion */
+  #rulesAccordion {
+  margin-top: 20px;
+  text-align: center;
+  max-width: 70%;
+  padding: 0;
+  }
+/* Year dropdown box */
 .form-select {
-  width: 60%;
+  width: 70%;
   margin: auto;
   margin-bottom: 20px;
   font-size: 1.5rem;
+  background-color: var(--button-colour);
+  color: white;
 }
 
-#intro {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 1.5rem; /* Increase the font size */
-}
 
-#Instructions {
-  text-align: center;
-  font-size: 1.5rem; /* Increase the font size */
-}
-
-#Instructions .game-intro {
-  width: 80%; /* Adjust the width as needed */
-  margin: 0 auto; /* Center the element */
-  text-align: auto; /* Center the text */
-}
-
-#instructions .game-intro {
-  width: 40%; /* Adjust the width as needed */
-  margin: 0 auto; /* Center the element */
-  text-align: auto; /* Center the text */
-  border: 4px solid var(--tertiary-color);
-}
-
-#Instructions ol {
-  font-size: 1.2rem; /* Increase the font size for the list items */
-}
-
-/* Custom CSS for home page */
-.home-page {
-/* background-color: var(--primary-color); */
-background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
-  url("../images/keyboard.jpg") center center/cover no-repeat fixed;
-}
 
 /* CSS for game page */
 .game-page {
@@ -143,27 +116,13 @@ background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
-    url("../images/keyboard.jpg") center center/cover no-repeat fixed;
 }
 
-/* General page styling */
-.game-page body {
-font-family: Arial, sans-serif;
-text-align: center;
-background-color: #f4f4f4;
-margin: 0;
-padding: 20px;
-}
 
-/* Heading */
-.game-page h1 {
-color: #333;
-}
 
 /* Card styling */
 
-.game-page .card {
+.card {
 background: white;
 padding: 20px;
 border-radius: 12px;
@@ -174,6 +133,7 @@ transition: transform 0.3s ease-in-out;
 flex-grow: 1;
 align-items: center;
 border: 2px solid var(--highlight-color);
+min-height: 20vh;
 }
 
 .game-page .card:hover {
@@ -190,14 +150,13 @@ height: auto;
 
 /* Song title */
 .game-page .card h3 {
-margin: 10px 0 5px;
+margin-top: 5px;
 font-size: 1.2em;
 color: #333;
 }
 
 /* Artist name */
 .game-page .card p {
-margin: 0;
 font-size: 1em;
 color: #666;
 }
@@ -207,22 +166,7 @@ color: #666;
 margin-top: 20px;
 }
 
-/* Accordian */
-.accordion-button {
-background: var(--highlight-color-light);
-color: white;
-margin: 5px;
-font-size: 1em;
-cursor: pointer;
-transition: all 0.3s;
-text-align: center;
-padding: 0;
-}
-#rulesAccordion {
-margin-top: 20px;
-text-align: center;
-max-width: 70%;
-}
+
 
 /* Buttons */
 .game-page button {
@@ -232,7 +176,7 @@ border: none;
 padding: 10px 20px;
 margin: 5px;
 border-radius: 8px;
-font-size: 1em;
+font-size: 1.2rem;
 cursor: pointer;
 transition: all 0.3s;
 }
@@ -259,7 +203,7 @@ color: #444;
 }
 
 .game-page audio {
-width: 100%;
+width: 90%;
 }
 
 .game-page .vs {
