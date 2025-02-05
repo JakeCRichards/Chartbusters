@@ -3,28 +3,28 @@
 
 /* CSS Variables */
 :root {
-  --primary-color: #0cc3eb; /* light blue */
-  --secondary-color: #183650; /* dark blue */
-  --tertiary-color: #e3d050; /* bright yellow */
-  --highlight-color: #d72cc4; /* neon pink */
+  --primary-color: #0cc3eb;
+  /* light blue */
+  --secondary-color: #183650;
+  /* dark blue */
+  --tertiary-color: #e3d050;
+  /* bright yellow */
+  --highlight-color: #d72cc4;
+  /* neon pink */
   --primary-font: "Orbitron", sans-serif;
   --button-colour: #085B6E;
 }
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+html {
+  min-height: 100dvh
 }
 
 body {
   background-color: var(--secondary-color);
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
     url("../images/keyboard.jpg") center center/cover no-repeat fixed;
-    font-family: var(--primary-font);
-    min-height: 100vh;
+  font-family: var(--primary-font);
+  margin: 0;
 }
 
 main {
@@ -41,14 +41,13 @@ footer {
   text-align: center;
   width: 100%;
   font-size: 1.5rem;
-  height: 5rem;
   margin-bottom: 0;
 }
 
 /* This is where formatting for logo should be */
 .header-logo {
   background: url("../images/cb_logo.png") no-repeat center center/cover;
-  padding: 20px; 
+  padding: 20px;
   width: 200px;
   height: 200px;
   margin: 50px;
@@ -61,8 +60,10 @@ footer {
   border-radius: 10px;
   margin-bottom: 20px;
   border: 8px solid var(--highlight-color);
-  width: 90%; /* Adjust the width as needed */
-  margin: 0 auto; /* Center the element */
+  width: 90%;
+  /* Adjust the width as needed */
+  margin: 0 auto;
+  /* Center the element */
   font-size: 1.3rem;
 }
 
@@ -72,7 +73,8 @@ footer {
 
 /* Accordion text */
 .game-intro ol {
-  font-size: 1rem; /* Adjust the font size as needed */
+  font-size: 1rem;
+  /* Adjust the font size as needed */
   background-color: var(--button-colour);
   color: white;
 }
@@ -87,7 +89,7 @@ footer {
   max-width: 95%;
 }
 
-#accordion-button button:hover{
+#accordion-button button:hover {
   background-color: none;
 }
 
@@ -98,6 +100,7 @@ footer {
   max-width: 70%;
   padding: 0;
 }
+
 /* Year dropdown box */
 .form-select {
   width: 70%;
@@ -108,12 +111,7 @@ footer {
   color: white;
 }
 
-/* CSS for game page */
-.game-page {
-  /* justify-content: center; */
-  /* align-items: center; */
-  
-}
+
 
 /* Card styling */
 
@@ -163,7 +161,7 @@ footer {
 
 .notifications {
   color: white;
-  
+
 }
 
 .row {
@@ -174,16 +172,16 @@ footer {
 
 /* Buttons */
 .game-page button {
-background: var(--highlight-color);
-color: white;
-border: none;
-padding: 10px 20px;
-margin: 5px;
-border-radius: 8px;
-font-size: 1.2rem;
-cursor: pointer;
-transition: all 0.3s;
-max-width: 80%;
+  background: var(--highlight-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  max-width: 80%;
 }
 
 .game-page button:hover {
@@ -291,7 +289,8 @@ button:disabled:hover {
 }
 
 .play-now-btn {
-  font-size: 1.2rem; /* Increase the font size for the button */
+  font-size: 1.2rem;
+  /* Increase the font size for the button */
 }
 
 /* Media Queries */
