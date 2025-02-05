@@ -96,7 +96,7 @@ function showNextSong() {
       <div class="row align-items-center">
         <div class="col-5 col-md-12 image-container">
 
-          <img src="${currentSong.image}" alt="${currentSong.title}" class="object-fit-contain object-fit-sm-none img-fluid">
+          <img src="${currentSong.image}" alt="${currentSong.title}" class="object-fit-contain img-fluid">
         </div>
       
       <div class="col-7 col-md-12">
@@ -134,7 +134,7 @@ function showNextSong() {
   <div class="card">
   <div class="row align-items-center">
         <div class="col-5 col-md-12 image-container">
-    <img src="${nextSong.image}" alt="${nextSong.title}" class="object-fit-contain object-fit-sm-none img-fluid">
+    <img src="${nextSong.image}" alt="${nextSong.title}" class="object-fit-contain img-fluid">
     </div>
       
       <div class="col-7 col-md-12">
