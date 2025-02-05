@@ -154,6 +154,23 @@ footer {
   margin-top: 20px;
 }
 
+/* Accordian */
+.accordion-button {
+  background: var(--highlight-color-light);
+  color: white;
+  margin: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  padding: 0;
+}
+#rulesAccordion {
+  margin-top: 20px;
+  text-align: center;
+  max-width: 70%;
+}
+
 /* Buttons */
 .game-page button {
   background: var(--highlight-color-light);
