@@ -62,7 +62,7 @@ footer {
 }
 
 .form-select {
-  width: 50%;
+  width: 60%;
   margin: auto;
   font-size: 1.5rem;
 }
@@ -108,16 +108,20 @@ footer {
 }
 
 /* Card styling */
+.game-wrapper * {
+  border: 2px solid #333;
+}
+
 .game-page .card {
-  background: white;
+  background: rgb(184, 1, 1);
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  max-width: 250px;
   margin: 20px 20px;
   text-align: center;
   transition: transform 0.3s ease-in-out;
+  flex-grow: 1;
+  align-items: center;
 }
 
 .game-page .card:hover {
@@ -128,9 +132,8 @@ footer {
 .game-page .card img {
   border-radius: 50%;
   border: 2px solid #333;
-  min-height: 15rem;
-  max-height: 15rem;
-  width: auto;
+  height: 15rem;
+  width: 15rem;
 }
 
 /* Song title */
@@ -184,14 +187,6 @@ button:disabled:hover {
 .game-page #song-container p {
   font-size: 1.2em;
   color: #444;
-}
-
-.game-page .game-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* gap: 20px; */
 }
 
 .game-page audio {
@@ -257,69 +252,3 @@ button:disabled:hover {
 /* Media Queries */
 
 /* Only mobiles */
-
-@media (max-width: 767px) {
-  /* Song image */
-  .game-page .card img {
-    display: none;
-  }
-}
-
-/* Tablets and larger */
-
-@media (min-width: 768px) {
-  .game-intro {
-    width: 80%;
-  }
-
-  .game-page .game-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  #song1 {
-    order: 0;
-  }
-
-  #song2 {
-    order: 1;
-  }
-
-  #vs {
-    order: 2;
-    width: 60%;
-  }
-
-  #game-over {
-    width: 60%;
-  }
-}
-
-/* Laptops and larger */
-
-@media (min-width: 1024px) {
-
-  .game-intro {
-    width: 70%;
-  }
-
-  .game-page .game-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-  #song1 {
-    order: 0;
-  }
-
-  #song2 {
-    order: 2;
-  }
-
-  #vs {
-    order: 1;
-    width: 20%;
-  }
-}
