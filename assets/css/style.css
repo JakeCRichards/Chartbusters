@@ -64,6 +64,7 @@ footer {
 .form-select {
   width: 60%;
   margin: auto;
+  margin-bottom: 20px;
   font-size: 1.5rem;
 }
 
@@ -109,13 +110,12 @@ footer {
 
 /* Card styling */
 
-
 .game-page .card {
   background: white;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 0;
+  margin-bottom: 1rem;
   text-align: center;
   transition: transform 0.3s ease-in-out;
   flex-grow: 1;
