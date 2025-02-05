@@ -12,12 +12,6 @@ html {
   font-family: var(--primary-font);
 }
 
-#song-container {
-  background-color: rgba(0, 0, 0, 0.8);
-  
-
-}
-
 
 html,
 body {
@@ -47,6 +41,7 @@ footer {
   padding: 20px;
   text-align: center;
   width: 100%;
+  font-size: 1.5rem;
 }
 
 /* This is where formatting for logo should be */
@@ -132,7 +127,7 @@ transition: transform 0.3s ease-in-out;
 flex-grow: 1;
 align-items: center;
 border: 2px solid var(--highlight-color);
-min-height: 20vh;
+min-height: 10vh;
 }
 
 .game-page .card:hover {
@@ -165,7 +160,9 @@ color: #666;
 margin-top: 20px;
 }
 
-
+.notifications {
+  color: white;
+}
 
 /* Buttons */
 .game-page button {
@@ -196,9 +193,13 @@ color: #333;
 font-size: 1.5em;
 }
 
-.game-page #song-container p {
+.game-page #song-container {
 font-size: 1.2em;
-color: #444;
+color:#333
+}
+
+.game-page #score-tracking p {
+  color: white;
 }
 
 .game-page audio {
@@ -209,8 +210,13 @@ width: 90%;
 font-size: 1em;
 font-weight: bold;
 color: #fff;
-background-gradient: linear-gradient(90deg, #0cc3eb 0%, #183650 100%);
+background-color: rgba(0, 0, 0, 0.8);
+margin-bottom: 10px;
+border-radius: 8px;
+border: 2px solid var(--highlight-color);
+padding-top: 5px;
 }
+  
 
 /* Style for upcoming (next) song */
 .game-page .upcoming {
