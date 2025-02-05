@@ -1,303 +1,304 @@
 /* CSS Variables */
 :root {
-    --primary-color: #0cc3eb; /* light blue */
-    --secondary-color: #183650; /* dark blue */
-    --tertiary-color: #e3d050; /* bright yellow */
-    --highlight-color: #d72cc4; /* neon pink */
-    --highlight-color-light: #681e66; /* deep pink */
+  --primary-color: #0cc3eb; /* light blue */
+  --secondary-color: #183650; /* dark blue */
+  --tertiary-color: #e3d050; /* bright yellow */
+  --highlight-color: #d72cc4; /* neon pink */
+  --highlight-color-light: #681e66; /* deep pink */
 }
 
 #navbar {
-    background-color: var(--secondary-color);
-    color: #681e66;
-    padding: 20px;
-    text-align: center;
+  background-color: var(--secondary-color);
+  color: #681e66;
+  padding: 20px;
+  text-align: center;
 }
 
 .navbar {
-    background-color: var(--secondary-color);
-    color: #681e66;
+  background-color: var(--secondary-color);
+  color: #681e66;
 }
 
 html,
 body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+height: 100%;
+margin: 0;
+display: flex;
+flex-direction: column;
 }
 
 body {
-    flex: 1;
-    font-family: 'Orbitron', sans-serif;
-    color: #e3d050; /* Change font color to bright yellow */
+  flex: 1;
+  font-family: 'Orbitron', sans-serif;
+  color: #e3d050; /* Change font color to bright yellow */
 }
 
 main {
-  flex: 1;
+flex: 1;
 }
 
 section {
-  padding-bottom: 1rem;
+padding-bottom: 1rem;
 }
 
 footer {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  padding: 20px;
-  text-align: center;
+background-color: var(--secondary-color);
+color: var(--primary-color);
+padding: 20px;
+text-align: center;
 }
 
 #home {
-  color: #ffffff;
+color: #ffffff;
 }
 
 .header-logo {
+color: var(--primary-color);
+font-size: 2rem;
+font-weight: bold;
+text-transform: uppercase;
+padding: 10px 0;
+margin-bottom: 20px;
   color: var(--primary-color);
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 10px 0;
+  padding: 50px 0; 
   margin-bottom: 20px;
-    color: var(--primary-color);
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 50px 0; 
-    margin-bottom: 20px;
 }
 
 .game-intro {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  border: 4px solid var(--highlight-color);
-  width: 90%; /* Adjust the width as needed */
-  margin: 0 auto; /* Center the element */
-  font-size: 1.5rem;
+background-color: var(--secondary-color);
+color: var(--primary-color);
+padding: 20px;
+border-radius: 10px;
+margin-bottom: 20px;
+border: 4px solid var(--highlight-color);
+width: 90%; /* Adjust the width as needed */
+margin: 0 auto; /* Center the element */
+font-size: 1.5rem;
 }
 
 .form-select {
-  width: 60%;
-  margin: auto;
-  font-size: 1.5rem;
+width: 60%;
+margin: auto;
+margin-bottom: 20px;
+font-size: 1.5rem;
 }
 
 #intro {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 #Instructions {
-  text-align: center;
-  /* border: 2px solid var(--highlight-color); */ /* Remove this line */
+text-align: center;
+/* border: 2px solid var(--highlight-color); */ /* Remove this line */
 }
 
 #Instructions .game-intro {
-  width: 80%; /* Adjust the width as needed */
+width: 80%; /* Adjust the width as needed */
+margin: 0 auto; /* Center the element */
+text-align: auto; /* Center the text */
+}
+
+#instructions .game-intro {
+  width: 40%; /* Adjust the width as needed */
   margin: 0 auto; /* Center the element */
   text-align: auto; /* Center the text */
-#instructions .game-intro {
-    width: 40%; /* Adjust the width as needed */
-    margin: 0 auto; /* Center the element */
-    text-align: auto; /* Center the text */
-    border: 4px solid var(--tertiary-color);
-    color:#e3d050; /* Change font color to bright yellow */
-    font-family: "Orbitron", sans-serif;
+  border: 4px solid var(--tertiary-color);
+  color:#e3d050; /* Change font color to bright yellow */
+  font-family: "Orbitron", sans-serif;
 }
 
 /* Custom CSS for home page */
 .home-page {
-  /* background-color: var(--primary-color); */
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
-    url("../images/keyboard.jpg") center center/cover no-repeat fixed;
+/* background-color: var(--primary-color); */
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+  url("../images/keyboard.jpg") center center/cover no-repeat fixed;
 }
 
 /* CSS for game page */
 .game-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
-      url("../images/keyboard.jpg") center center/cover no-repeat fixed;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+    url("../images/keyboard.jpg") center center/cover no-repeat fixed;
+}
 
 /* General page styling */
 .game-page body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 20px;
+font-family: Arial, sans-serif;
+text-align: center;
+background-color: #f4f4f4;
+margin: 0;
+padding: 20px;
 }
 
 /* Heading */
 .game-page h1 {
-  color: #333;
+color: #333;
 }
 
 /* Card styling */
 
-
 .game-page .card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 0;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-  flex-grow: 1;
-  align-items: center;
-  border: 2px solid var(--highlight-color);
+background: white;
+padding: 20px;
+border-radius: 12px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+margin-bottom: 1rem;
+text-align: center;
+transition: transform 0.3s ease-in-out;
+flex-grow: 1;
+align-items: center;
+border: 2px solid var(--highlight-color);
 }
 
 .game-page .card:hover {
-  transform: scale(1.05);
+transform: scale(1.05);
 }
 
 /* Song image */
 .game-page .card img {
-  border-radius: 50%;
-  border: 2px solid #333;
-  width: 15rem;
-  height: auto;
+border-radius: 50%;
+border: 2px solid #333;
+width: 15rem;
+height: auto;
 }
 
 /* Song title */
 .game-page .card h3 {
-  margin: 10px 0 5px;
-  font-size: 1.2em;
-  color: #333;
+margin: 10px 0 5px;
+font-size: 1.2em;
+color: #333;
 }
 
 /* Artist name */
 .game-page .card p {
-  margin: 0;
-  font-size: 1em;
-  color: #666;
+margin: 0;
+font-size: 1em;
+color: #666;
 }
 
 /* Question section */
 .game-page .question {
-  margin-top: 20px;
+margin-top: 20px;
 }
 
 /* Accordian */
 .accordion-button {
-  background: var(--highlight-color-light);
-  color: white;
-  margin: 5px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-align: center;
-  padding: 0;
+background: var(--highlight-color-light);
+color: white;
+margin: 5px;
+font-size: 1em;
+cursor: pointer;
+transition: all 0.3s;
+text-align: center;
+padding: 0;
 }
 #rulesAccordion {
-  margin-top: 20px;
-  text-align: center;
-  max-width: 70%;
+margin-top: 20px;
+text-align: center;
+max-width: 70%;
 }
 
 /* Buttons */
 .game-page button {
-  background: var(--highlight-color-light);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 8px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: all 0.3s;
+background: var(--highlight-color-light);
+color: white;
+border: none;
+padding: 10px 20px;
+margin: 5px;
+border-radius: 8px;
+font-size: 1em;
+cursor: pointer;
+transition: all 0.3s;
 }
 
 .game-page button:hover {
-  background: var(--highlight-color);
+background: var(--highlight-color);
 }
 
 button:disabled,
 button:disabled:hover {
-  background: #919191;
-  cursor: not-allowed;
+background: #919191;
+cursor: not-allowed;
 }
 
 /* End screen styling */
 .game-page #song-container h2 {
-  color: #333;
-  font-size: 1.5em;
+color: #333;
+font-size: 1.5em;
 }
 
 .game-page #song-container p {
-  font-size: 1.2em;
-  color: #444;
+font-size: 1.2em;
+color: #444;
 }
 
 .game-page audio {
-  width: 100%;
+width: 100%;
 }
 
 .game-page .vs {
-  font-size: 1em;
-  font-weight: bold;
-  color: #555;
+font-size: 1em;
+font-weight: bold;
+color: #555;
 }
 
 /* Style for upcoming (next) song */
 .game-page .upcoming {
-  opacity: 0.5;
-  filter: blur(4px);
-  transition: all 0.3s ease-in-out;
+opacity: 0.5;
+filter: blur(4px);
+transition: all 0.3s ease-in-out;
 }
 
 /* Hide peak position text */
 .game-page .chart-position.hidden {
-  visibility: hidden;
+visibility: hidden;
 }
 
 #song-container {
-  display: none;
+display: none;
 }
 
 #fb-share-button {
-  background: #3b5998;
-  border-radius: 3px;
-  font-weight: 600;
-  padding: 5px 8px;
-  display: inline-block;
-  position: static;
-  text-align: center;
+background: #3b5998;
+border-radius: 3px;
+font-weight: 600;
+padding: 5px 8px;
+display: inline-block;
+position: static;
+text-align: center;
 }
 
 #fb-share {
-  text-align: center;
-  margin-top: 2rem;
+text-align: center;
+margin-top: 2rem;
 }
 
 #fb-share-button:hover {
-  cursor: pointer;
-  background: #213a6f;
+cursor: pointer;
+background: #213a6f;
 }
 
 #game-over {
-  display: none;
+display: none;
 }
 
 #game-over {
-  width: 90%;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
+width: 90%;
+margin: 0 auto;
+padding: 20px;
+border-radius: 12px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+text-align: center;
+transition: transform 0.3s ease-in-out;
 }
 
 /* Media Queries */
 
 /* Only mobiles */
-</main> 
