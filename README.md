@@ -2,7 +2,7 @@
 
 # **Portfolio Project 2 - Chartbusters**
 
-This website has been created to fulfill the project brief for Code Institute's JavaScript Hackathon assessment created by Jake Richards, Ben Wade, Paul O and Francesca Waters.
+This website has been created to fulfill the project brief for Code Institute's JavaScript Hackathon assessment created by Jake Richards, Ben Wade, Paul O'Sullivan and Francesca Waters.
 
 Live link: 
 
@@ -14,7 +14,7 @@ Chartbusters is a higher or lower music song quiz game that challenges users to 
 
 Have you ever had a friendly argument with a friend about whether a song made it to No1 or not? Or even in the top ten? Well then this could be the game for you.
 
-![Responsive Mock Up](/assets/images/)
+![Responsive Mock Up](/assets/images/responive.png)
 
 ## **User Stories**
 
@@ -70,23 +70,44 @@ The website is responsive and works on various devices, including desktops, tabl
 
 **Instructions Accordian:**
 
-An accordian helped to reduce the appearance of large selection of years.
+An accordian helped to reduce the appearance of the instruction and the large selection of years.
+
+![Accordian Feature](/assets/images/accordian.pngassets)
 
 **Interactive Quiz:**
 
 Users can play the higher or lower music song quiz.
 
+![Quiz Feature](/assets/images/quiz.png)
+
 **Score Tracking:**
 
 The game tracks the user's score and displays it at the end of the quiz.
+
+![Score Feature](/assets/images/score.png)
 
 **Social Sharing:**
 
 Allowing users to share their scores on social media platforms
 
+![Share feature](/assets/images/share.png)
+
 ### **Features left to Implement**
 
+- **Leaderboard:**
+  - Implement a leaderboard to display the top scores of all users. This feature will encourage competition and increase user engagement.
 
+- **User Authentication:**
+  - Add user authentication to allow users to create accounts, save their scores, and track their progress over time.
+
+- **Multiplayer Mode:**
+  - Develop a multiplayer mode where users can compete against each other in real-time.
+
+- **Achievements and Badges:**
+  - Implement a system of achievements and badges to reward users for reaching certain milestones or completing specific challenges.
+
+- **Customizable Themes:**
+  - Allow users to customize the appearance of the game with different themes and color schemes.
 
 ### **Technologies Used**
 
@@ -136,4 +157,3 @@ The live link can be found here:
 
 ### **Media**
 
-- Icons used in the navigation bar and footer are from [Font Awesome](https://fontawesome.com/).
