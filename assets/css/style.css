@@ -51,12 +51,11 @@ footer {
 
 /* This is where formatting for logo should be */
 .header-logo {
-  color: white;
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  background: url("../images/cb_logo.png") no-repeat center center/cover;
   padding: 50px 0; 
-  margin-bottom: 20px;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
 }
 
 .game-intro {
