@@ -35,7 +35,7 @@ Before starting the project, a couple of basic wireframes were created to visual
 
 ## **How AI Was Used**
 
-Artificial Intelligence played a significant role in the development of this project. Here are some ways AI was utilized:
+Artificial Intelligence played a significant role in the development of this project. Here are some ways AI was utilised:
 
 - **Code Generation**
 
@@ -43,11 +43,7 @@ Artificial Intelligence played a significant role in the development of this pro
 
 - **Debugging**
 
-  - AI-powered debugging tools were utilized to identify and fix issues in the code. These tools analyzed the codebase, detected potential bugs, and provided recommendations for resolving them. This ensured a smoother development process and a more robust final product.
-
-- **Content Assistance**
-
-  - AI tools like GitHub Copilot were used to assist in writing code and content for the website. These tools provided suggestions and auto-completions, which sped up the development process and ensured high-quality code.
+  - AI-powered debugging tools were utilised to identify and fix issues in the code. These tools analysed the codebase, detected potential bugs, and provided recommendations for resolving them. This ensured a smoother development process and a more robust final product.
 
 - **Accessibility Improvements**
   - AI was used to analyse the website's accessibility features.
@@ -60,37 +56,39 @@ By leveraging AI, the project was able to achieve a higher level of efficiency, 
 
 The website includes several features, which are detailed below.
 
-**Colour Pallete:**
+**Colour Palette:**
 
-By leveraging bright neon blue and pink colors, the quiz game can create an appealing, dynamic, and user-friendly experience that encourages engagement and enjoyment.
+By leveraging bright neon blue and pink colours, the quiz game creates an appealing, dynamic, and user-friendly experience that encourages engagement and enjoyment. These vibrant colours not only make the game visually attractive but also help in creating a lively and energetic atmosphere that keeps users entertained.
+
+![Colour-palette](/assets/images/palette.png)
 
 **Responsive Design:**
 
-The website is responsive and works on various devices, including desktops, tablets, and smartphones.
+The website is responsive and works seamlessly on various devices, including desktops, tablets, and smartphones. This ensures that users have a consistent and enjoyable experience regardless of the device they are using. The responsive design adapts to different screen sizes and orientations, providing optimal usability and accessibility.
 
-**Instructions Accordian:**
+**Game Intro and Instructions Accordion:**
 
-An accordian helped to reduce the appearance of the instruction and the large selection of years.
+An accordion helps to reduce the appearance of the instructions and the large selection of years, making the interface cleaner and more user-friendly. This feature allows users to easily access the information they need without overwhelming them with too much content at once. The accordion design enhances the overall user experience by keeping the interface organised and intuitive.
 
-![Accordian Feature](/assets/images/accordian.pngassets)
+![Accordion Feature](/assets/images/game-intro.png)
 
 **Interactive Quiz:**
 
-Users can play the higher or lower music song quiz.
+Users can play the higher or lower music song quiz, which is the core feature of the website. This interactive quiz challenges users to test their knowledge of music chart history in a fun and engaging way. The quiz is designed to be both entertaining and educational, providing users with an enjoyable gaming experience.
 
 ![Quiz Feature](/assets/images/quiz.png)
 
-**Score Tracking:**
+**Real-time Feedback and Score Tracking:**
 
-The game tracks the user's score and displays it at the end of the quiz.
+The game tracks the user's score in real-time and displays it at the end of the quiz, providing immediate feedback. This feature allows users to see their progress and performance instantly, motivating them to improve their scores and continue playing. Real-time feedback enhances the gaming experience by making it more interactive and rewarding.
 
 ![Score Feature](/assets/images/score.png)
 
-**Social Sharing:**
+**Results and Social Sharing:**
 
-Allowing users to share their scores on social media platforms
+Users can share their scores on social media platforms, adding a social element to the game and encouraging competition among friends. This feature not only increases user engagement but also helps in promoting the game to a wider audience. Social sharing makes the game more interactive and fun by allowing users to connect and compete with others.
 
-![Share feature](/assets/images/share.png)
+![Share feature](/assets/images/results.png)
 
 ### **Features left to Implement**
 
@@ -149,11 +147,13 @@ This project was deployed on GitHub. Below are the steps followed to deploy the 
 4. Once the main branch has been selected, hit the save button.
 5. Finally, when the page is refreshed, a detailed ribbon display will indicate the successful deployment.
 
-The live link can be found here:
+The live link can be found here: 
 
 ## **Credits**
 
 ### **Content**
 
 ### **Media**
+
+The images and audio used in this project were sourced from the Top Charts website.
 
