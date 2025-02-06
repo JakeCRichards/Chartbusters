@@ -1,10 +1,10 @@
 # hackathon1
 
-# **Portfolio Project 2 - Chartbusters**
+# **Chartbusters**
 
 This website has been created to fulfill the project brief for Code Institute's JavaScript Hackathon assessment created by Jake Richards, Ben Wade, Paul O'Sullivan and Francesca Waters.
 
-Live link: 
+Live link: [Chartbusters Live](https://jakecrichards.github.io/hackathon1/)
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ Chartbusters is a higher or lower music song quiz game that challenges users to 
 
 Have you ever had a friendly argument with a friend about whether a song made it to No1 or not? Or even in the top ten? Well then this could be the game for you.
 
-![Responsive Mock Up](/assets/images/responive.png)
+![Responsive Mock Up](/assets/images/responsive.png)
 
 ## **User Stories**
 
@@ -68,9 +68,10 @@ The website is responsive and works seamlessly on various devices, including des
 
 **Game Intro and Instructions Accordion:**
 
+The game intro features a visually appealing logo and a prominent "Play Now" button to attract users and encourage them to start the quiz. The logo represents the theme of the game, while the "Play Now" button provides a clear call-to-action, making it easy for users to begin playing. This introductory section sets the tone for the game and enhances the overall user experience by providing an engaging and inviting entry point.
 An accordion helps to reduce the appearance of the instructions and the large selection of years, making the interface cleaner and more user-friendly. This feature allows users to easily access the information they need without overwhelming them with too much content at once. The accordion design enhances the overall user experience by keeping the interface organised and intuitive.
 
-![Accordion Feature](/assets/images/game-intro.png)
+![Game Intro Feature](/assets/images/game-intro.png)
 
 **Interactive Quiz:**
 
@@ -131,7 +132,11 @@ All HTML and CSS code was validated using the W3C Markup Validation Service and 
 
 **HTML Validation:**
 
+![HTML Validation](/assets/images/html.png)
+
 **CSS Validation:**
+
+![CSS Validation](/assets/images/css.png)
 
 ### **Lighthouse Testing**
 
@@ -147,7 +152,7 @@ This project was deployed on GitHub. Below are the steps followed to deploy the 
 4. Once the main branch has been selected, hit the save button.
 5. Finally, when the page is refreshed, a detailed ribbon display will indicate the successful deployment.
 
-The live link can be found here: 
+The live link can be found here: [Chartbusters Live](https://jakecrichards.github.io/hackathon1/)
 
 ## **Credits**
 
@@ -155,5 +160,5 @@ The live link can be found here:
 
 ### **Media**
 
-The images and audio used in this project were sourced from the Top Charts website.
+The images and audio used in this project were sourced from the Official UK Singles Chart. (https://www.officialcharts.com/charts/singles-chart/)
 
