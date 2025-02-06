@@ -4,7 +4,7 @@
 
 This website has been created to fulfill the project brief for Code Institute's JavaScript Hackathon assessment created by Jake Richards, Ben Wade, Paul O'Sullivan and Francesca Waters.
 
-Live link: [Chartbusters Live](https://jakecrichards.github.io/hackathon1/)
+Live link: [Chartbusters](https://jakecrichards.github.io/hackathon1/)
 
 ## Table of Contents
 
@@ -33,7 +33,7 @@ Have you ever had a friendly argument with a friend about whether a song made it
 
 ![Responsive Mock Up](/assets/images/responsive.png)
 
-## **User Stories**
+## **Project Board and User Stories**
 
 In line with Agile methodology, we wrote user stories in the planning and development of our website. The full details of these can be found on our project board.
 
