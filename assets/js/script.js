@@ -249,3 +249,12 @@ fbButton.addEventListener('click', function () {
     );
     return false;
 });
+
+document.getElementById('fontSelector').addEventListener('change', function() {
+  const selectedFont = this.value;
+
+  // Only change the font if a valid option is selected
+  if (selectedFont !== 'placeholder') {
+      document.documentElement.style.setProperty('--primary-font', selectedFont);
+  }
+});
