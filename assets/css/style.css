@@ -90,7 +90,7 @@ footer {
 }
 
 #accordion-button button:hover {
-  background-color: none;
+  background-color: transparent;
 }
 
 /* Accordion */
