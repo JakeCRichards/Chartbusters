@@ -2,7 +2,7 @@
 
 # **Portfolio Project 2 - Chartbusters**
 
-This website has been created to fulfill the project brief for Code Institute's JavaScript Hackathon assessment created by Jake Richards, Ben Wade, Paul O and Francesca Waters.
+This website has been created to fulfill the project brief for Code Institute's JavaScript Hackathon assessment created by Jake Richards, Ben Wade, Paul O'Sullivan and Francesca Waters.
 
 Live link: 
 
@@ -10,11 +10,11 @@ Live link:
 
 ## **Description**
 
-Chartbusters is a higher or lower music song quiz game that challenges users to guess whether the next song's chart position is higher or lower than the current song. This interactive and fun game allows users to test their knowledge of music chart history. Aimed at people aged 8 and above, the game is designed to be accessible and enjoyable for a wide range of audiences. The simple yet engaging concept makes it easy for younger players to grasp while still providing a challenge for older music enthusiasts.
+Chartbusters is a higher or lower quiz game that challenges users to guess whether the next song's chart position is higher or lower than the current song. This interactive and fun game allows users to test their knowledge of music chart history. Aimed at people aged 8 and above, the game is designed to be accessible and enjoyable for a wide range of audiences. The simple yet engaging concept makes it easy for younger players to grasp while still providing a challenge for older music enthusiasts.
 
 Have you ever had a friendly argument with a friend about whether a song made it to No1 or not? Or even in the top ten? Well then this could be the game for you.
 
-![Responsive Mock Up](/assets/images/)
+![Responsive Mock Up](/assets/images/responive.png)
 
 ## **User Stories**
 
@@ -35,7 +35,7 @@ Before starting the project, a couple of basic wireframes were created to visual
 
 ## **How AI Was Used**
 
-Artificial Intelligence played a significant role in the development of this project. Here are some ways AI was utilized:
+Artificial Intelligence played a significant role in the development of this project. Here are some ways AI was utilised:
 
 - **Code Generation**
 
@@ -43,11 +43,7 @@ Artificial Intelligence played a significant role in the development of this pro
 
 - **Debugging**
 
-  - AI-powered debugging tools were utilized to identify and fix issues in the code. These tools analyzed the codebase, detected potential bugs, and provided recommendations for resolving them. This ensured a smoother development process and a more robust final product.
-
-- **Content Assistance**
-
-  - AI tools like GitHub Copilot were used to assist in writing code and content for the website. These tools provided suggestions and auto-completions, which sped up the development process and ensured high-quality code.
+  - AI-powered debugging tools were utilised to identify and fix issues in the code. These tools analysed the codebase, detected potential bugs, and provided recommendations for resolving them. This ensured a smoother development process and a more robust final product.
 
 - **Accessibility Improvements**
   - AI was used to analyse the website's accessibility features.
@@ -60,33 +56,60 @@ By leveraging AI, the project was able to achieve a higher level of efficiency, 
 
 The website includes several features, which are detailed below.
 
-**Colour Pallete:**
+**Colour Palette:**
 
-By leveraging bright neon blue and pink colors, the quiz game can create an appealing, dynamic, and user-friendly experience that encourages engagement and enjoyment.
+By leveraging bright neon blue and pink colours, the quiz game creates an appealing, dynamic, and user-friendly experience that encourages engagement and enjoyment. These vibrant colours not only make the game visually attractive but also help in creating a lively and energetic atmosphere that keeps users entertained.
+
+![Colour-palette](/assets/images/palette.png)
 
 **Responsive Design:**
 
-The website is responsive and works on various devices, including desktops, tablets, and smartphones.
+The website is responsive and works seamlessly on various devices, including desktops, tablets, and smartphones. This ensures that users have a consistent and enjoyable experience regardless of the device they are using. The responsive design adapts to different screen sizes and orientations, providing optimal usability and accessibility.
 
-**Instructions Accordian:**
+**Game Intro and Instructions Accordion:**
 
-An accordian helped to reduce the appearance of large selection of years.
+An accordion helps to reduce the appearance of the instructions and the large selection of years, making the interface cleaner and more user-friendly. This feature allows users to easily access the information they need without overwhelming them with too much content at once. The accordion design enhances the overall user experience by keeping the interface organised and intuitive.
+
+![Accordion Feature](/assets/images/game-intro.png)
 
 **Interactive Quiz:**
 
-Users can play the higher or lower music song quiz.
+Users can play the higher or lower music song quiz, which is the core feature of the website. This interactive quiz challenges users to test their knowledge of music chart history in a fun and engaging way. The quiz is designed to be both entertaining and educational, providing users with an enjoyable gaming experience.
 
-**Score Tracking:**
+![Quiz Feature](/assets/images/quiz.png)
 
-The game tracks the user's score and displays it at the end of the quiz.
+**Real-time Feedback and Score Tracking:**
 
-**Social Sharing:**
+The game tracks the user's score in real-time and displays it at the end of the quiz, providing immediate feedback. This feature allows users to see their progress and performance instantly, motivating them to improve their scores and continue playing. Real-time feedback enhances the gaming experience by making it more interactive and rewarding.
 
-Allowing users to share their scores on social media platforms
+![Score Feature](/assets/images/score.png)
+
+**Results and Social Sharing:**
+
+Users can share their scores on social media platforms, adding a social element to the game and encouraging competition among friends. This feature not only increases user engagement but also helps in promoting the game to a wider audience. Social sharing makes the game more interactive and fun by allowing users to connect and compete with others.
+
+![Share feature](/assets/images/results.png)
+
+**Play a clip of the displayed songs**
+
+
 
 ### **Features left to Implement**
 
+- **Leaderboard:**
+  - Implement a leaderboard to display the top scores of all users. This feature will encourage competition and increase user engagement.
 
+- **User Authentication:**
+  - Add user authentication to allow users to create accounts, save their scores, and track their progress over time.
+
+- **Multiplayer Mode:**
+  - Develop a multiplayer mode where users can compete against each other in real-time.
+
+- **Achievements and Badges:**
+  - Implement a system of achievements and badges to reward users for reaching certain milestones or completing specific challenges.
+
+- **Customizable Themes:**
+  - Allow users to customize the appearance of the game with different themes and color schemes.
 
 ### **Technologies Used**
 
@@ -128,7 +151,7 @@ This project was deployed on GitHub. Below are the steps followed to deploy the 
 4. Once the main branch has been selected, hit the save button.
 5. Finally, when the page is refreshed, a detailed ribbon display will indicate the successful deployment.
 
-The live link can be found here:
+The live link can be found here: 
 
 ## **Credits**
 
@@ -136,4 +159,5 @@ The live link can be found here:
 
 ### **Media**
 
-- Icons used in the navigation bar and footer are from [Font Awesome](https://fontawesome.com/).
+The images and audio used in this project were sourced from the Top Charts website.
+
