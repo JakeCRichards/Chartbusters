@@ -72,7 +72,7 @@ The website includes several features, which are detailed below.
 
 **Colour Palette:**
 
-By leveraging bright neon blue and pink colours, the quiz game creates an appealing, dynamic, and user-friendly experience that encourages engagement and enjoyment. These vibrant colours not only make the game visually attractive but also help in creating a lively and energetic atmosphere that keeps users entertained.
+By using bright neon blue and pink colours, the quiz game creates an appealing, dynamic, and user-friendly experience that encourages engagement and enjoyment. These vibrant colours not only make the game visually attractive but also help in creating a lively and energetic atmosphere that keeps users entertained.
 
 ![Colour-palette](/assets/images/palette.png)
 
@@ -80,16 +80,23 @@ By leveraging bright neon blue and pink colours, the quiz game creates an appeal
 
 The website is responsive and works seamlessly on various devices, including desktops, tablets, and smartphones. This ensures that users have a consistent and enjoyable experience regardless of the device they are using. The responsive design adapts to different screen sizes and orientations, providing optimal usability and accessibility.
 
+![Responsive Mock Up](/assets/images/responsive.png)
+
 **Game Intro and Instructions Accordion:**
 
-The game intro features a visually appealing logo and a prominent "Play Now" button to attract users and encourage them to start the quiz. The logo represents the theme of the game, while the "Play Now" button provides a clear call-to-action, making it easy for users to begin playing. This introductory section sets the tone for the game and enhances the overall user experience by providing an engaging and inviting entry point.
-An accordion helps to reduce the appearance of the instructions and the large selection of years, making the interface cleaner and more user-friendly. This feature allows users to easily access the information they need without overwhelming them with too much content at once. The accordion design enhances the overall user experience by keeping the interface organised and intuitive.
+The game intro features a visually appealing logo and a prominent "Start Game" button to attract users and encourage them to start the quiz. The logo represents the theme of the game, while the "Start Game" button provides a clear call-to-action, making it easy for users to begin playing. This introductory section sets the tone for the game and enhances the overall user experience by providing an engaging and inviting entry point.
+
+Using two accordion features help to reduce space used by the instructions and the large selection of years, making the interface cleaner and more user-friendly. This feature allows users to easily access the information they need without overwhelming them with too much content at once. The accordion design enhances the overall user experience by keeping the interface organised and intuitive.
 
 ![Game Intro Feature](/assets/images/game-intro.png)
 
 **Interactive Quiz:**
 
-Users can play the higher or lower music song quiz, which is the core feature of the website. This interactive quiz challenges users to test their knowledge of music chart history in a fun and engaging way. The quiz is designed to be both entertaining and educational, providing users with an enjoyable gaming experience.
+Users can play the higher, lower, or the same music song quiz, which is the core feature of the website. During the quiz, users are presented with buttons to choose whether the next song's chart position is higher, lower, or the same as the current song. 
+
+During the quiz, users can view the cover image of the current song, along with the song title and artist name. This feature enhances the user experience by providing visual and contextual information about the song being played. Additionally, users can listen to a short audio clip of the song, which helps them make an informed guess about its chart position.
+
+This combination of visual and audio elements makes the quiz more engaging and interactive, allowing users to immerse themselves in the music and enjoy a richer gaming experience.
 
 ![Quiz Feature](/assets/images/quiz.png)
 
