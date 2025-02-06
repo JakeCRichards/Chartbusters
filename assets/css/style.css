@@ -91,7 +91,7 @@ footer {
 }
 
 #accordion-button button:hover {
-  background-color: transparent;
+  background-color: none;
 }
 
 /* Accordion */
