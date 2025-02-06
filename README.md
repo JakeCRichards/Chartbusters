@@ -8,6 +8,23 @@ Live link: [Chartbusters Live](https://jakecrichards.github.io/hackathon1/)
 
 ## Table of Contents
 
+- [Description](#description)
+- [User Stories](#user-stories)
+- [Wireframes](#wireframes)
+- [How AI Was Used](#how-ai-was-used)
+- [Features](#features)
+  - [Existing Features](#existing-features)
+  - [Features left to Implement](#features-left-to-implement)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+  - [Code Validation](#code-validation)
+  - [Lighthouse Testing](#lighthouse-testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+  - [Content](#content)
+  - [Media](#media)
+  - [Acknowledgements](#acknowledgements)
+
 ## **Description**
 
 Chartbusters is a higher or lower music song quiz game that challenges users to guess whether the next song's chart position is higher or lower than the current song. This interactive and fun game allows users to test their knowledge of music chart history. Aimed at people aged 8 and above, the game is designed to be accessible and enjoyable for a wide range of audiences. The simple yet engaging concept makes it easy for younger players to grasp while still providing a challenge for older music enthusiasts.
@@ -18,16 +35,13 @@ Have you ever had a friendly argument with a friend about whether a song made it
 
 ## **User Stories**
 
-In line with Agile methodology, we wrote user stories in the planning and development of my website. The full details of these can be found on our project board.
+In line with Agile methodology, we wrote user stories in the planning and development of our website. The full details of these can be found on our project board.
 
 ![User Stories Project Board](/assets/images/user-stories.png)
 
-
 ## **Wireframes**
 
-Before starting the project, a couple of basic wireframes were created to visualize the final product. Both mobile and desktop wireframes were developed.
-
-<img>
+Before starting the project, a couple of basic wireframes were created to visualise the final product. Both mobile and desktop wireframes were developed.
 
 ![Mobile wireframe](/assets/images/mobile.png) ![desktop wireframe](/assets/images/desktop.png)
 
@@ -94,15 +108,19 @@ Users can share their scores on social media platforms, adding a social element 
 ### **Features left to Implement**
 
 - **Leaderboard:**
+
   - Implement a leaderboard to display the top scores of all users. This feature will encourage competition and increase user engagement.
 
 - **User Authentication:**
+
   - Add user authentication to allow users to create accounts, save their scores, and track their progress over time.
 
 - **Multiplayer Mode:**
+
   - Develop a multiplayer mode where users can compete against each other in real-time.
 
 - **Achievements and Badges:**
+
   - Implement a system of achievements and badges to reward users for reaching certain milestones or completing specific challenges.
 
 - **Customizable Themes:**
@@ -115,16 +133,16 @@ Users can share their scores on social media platforms, adding a social element 
 - JavaScript
 
 ## **Testing**
+The website underwent comprehensive testing to ensure its functionality and accessibility:
 
-The website was thoroughly tested before completion.
+- **Manual Code Review:** Conducted to identify and fix bugs, and to ensure accessibility requirements such as alt text on images are met.
+- **W3C Validation:** The site was checked using the W3C HTML and CSS validators to ensure compliance with web standards.
+- **Link Testing:** Verified that all links work correctly and that external links open in a new tab.
+- **Local Testing:** Manually tested the site locally for rendering issues, image loading, navigation links, responsiveness at different breakpoints, and checked the console for errors using developer tools.
+- **Hosted Site Testing:** Manually tested the deployed site to ensure it functions as expected.
+- **Lighthouse Testing:** Used Dev Tools Lighthouse to assess performance, accessibility, best practices, and SEO.
 
-- Manual code review to find bugs
-- Manual code review to check accessability requirements eg. alt text on images
-- Check site with W3S HTML/CSS validator
-- All links work and external links open in a new tab
-- Manually test site locally. for example, rendering issues, images loading, navigation links, scale at breakpoints, check console for errors in dev tools, etc.
-- Manually test hosted site
-- Testing with Dev Tools Lighthouse
+These steps ensured a robust and user-friendly final product.
 
 ### **Code Validation**
 
@@ -132,15 +150,21 @@ All HTML and CSS code was validated using the W3C Markup Validation Service and 
 
 **HTML Validation:**
 
+All HTML code was validated using the W3C Markup Validation Service to ensure it meets web standards and best practices. The validation process helped identify six errors which were easily corrected, resulting in a clean and compliant HTML structure.
+
 ![HTML Validation](/assets/images/html.png)
 
 **CSS Validation:**
+
+All CSS code was validated using the W3C CSS Validation Service to ensure it adheres to web standards and best practices. The validation process helped identify one error in the CSS code which was corrected, ensuring a clean and efficient stylesheet.
 
 ![CSS Validation](/assets/images/css.png)
 
 ### **Lighthouse Testing**
 
 Lighthouse was used to test the performance, accessibility, best practices, and SEO of the website. The results are as follows:
+
+![Lighthouse Testing](/assets/images/lighthouse.png)
 
 ## **Deployment**
 
@@ -158,7 +182,15 @@ The live link can be found here: [Chartbusters Live](https://jakecrichards.githu
 
 ### **Content**
 
+- The text content for the game, including song and artist names, was sourced from the [Official UK Singles Chart](https://www.officialcharts.com/charts/singles-chart/).
+
 ### **Media**
 
-The images and audio used in this project were sourced from the Official UK Singles Chart. (https://www.officialcharts.com/charts/singles-chart/)
+- The images and audio used in this project were sourced from the [Official UK Singles Chart](https://www.officialcharts.com/charts/singles-chart/).
+- The logo was created by Paul O'Sullivan on the project team using Adobe Photoshop.
 
+### **Acknowledgements**
+
+- We would like to thank Code Institute for providing the project brief and guidance throughout the development process.
+- We also appreciate the feedback and suggestions from our peers and testers, which helped improve the final product.
+- Finally, we acknowledge the use of GitHub Copilot for assisting in code generation and debugging.
