@@ -4,7 +4,7 @@
 
 This website has been created to fulfill the project brief for Code Institute's JavaScript Hackathon assessment created by Jake Richards, Ben Wade, Paul O'Sullivan and Francesca Waters.
 
-Live link: [Chartbusters](https://jakecrichards.github.io/hackathon1/)
+Live link: [Chartbusters](https://jakecrichards.github.io/Chartbusters/)
 
 ## Table of Contents
 
@@ -183,7 +183,7 @@ This project was deployed on GitHub. Below are the steps followed to deploy the 
 4. Once the main branch has been selected, hit the save button.
 5. Finally, when the page is refreshed, a detailed ribbon display will indicate the successful deployment.
 
-The live link can be found here: [Chartbusters Live](https://jakecrichards.github.io/hackathon1/)
+The live link can be found here: [Chartbusters Live](https://jakecrichards.github.io/Chartbusters/)
 
 ## **Credits**
 
